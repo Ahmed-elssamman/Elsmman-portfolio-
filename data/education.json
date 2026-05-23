@@ -1,0 +1,18 @@
+[
+  {
+    "id": "bsc-cs",
+    "degree": "Bachelor of Science — Computer Science",
+    "institution": "October 6 University",
+    "location": "Cairo, Egypt",
+    "start": "Sep 2017",
+    "end": "Jun 2022"
+  },
+  {
+    "id": "iti-mearn",
+    "degree": "MEARN Stack Development Program",
+    "institution": "Information Technology Institute (ITI)",
+    "location": "Qena, Egypt",
+    "start": "Jun 2023",
+    "end": "Oct 2024"
+  }
+]

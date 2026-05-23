@@ -1,0 +1,26 @@
+
+> ahmed-elsamman-portfolio@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.18
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1853ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1852ms (1926 modules)
+ GET / 200 in 2179ms
+ ✓ Compiled /src/middleware in 298ms (73 modules)
+ ✓ Compiled /admin/27348/login in 288ms (1935 modules)
+ GET /admin/27348/login 200 in 407ms
+ GET / 200 in 177ms
+ GET /admin/27348/login?next=%2Fadmin%2F27348 200 in 42ms
+ ✓ Compiled /api/admin/login in 327ms (1044 modules)
+ POST /api/admin/login 200 in 392ms
+ ○ Compiling /admin/27348 ...
+ ✓ Compiled /admin/27348 in 575ms (1993 modules)
+ GET / 200 in 169ms
+ ✓ Compiled /api/admin/[resource] in 210ms (1058 modules)
+ PUT /api/admin/projects 200 in 611ms
+ GET / 200 in 132ms

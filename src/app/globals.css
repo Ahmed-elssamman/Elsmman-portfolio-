@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Inter", system-ui, sans-serif;
+}
+
+html,
+body {
+  background: #05060A;
+  color: #E6E8EE;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+::selection {
+  background: rgba(122, 182, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Custom utility: thin top hairline used across panels */
+@layer utilities {
+  .hairline {
+    position: relative;
+  }
+  .hairline::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(122, 182, 255, 0.35) 30%,
+      rgba(122, 182, 255, 0.35) 70%,
+      transparent
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 17, 24, 0.6),
+      rgba(10, 12, 18, 0.4)
+    );
+    border: 1px solid rgba(38, 44, 59, 0.6);
+    backdrop-filter: blur(12px);
+  }
+
+  .grid-overlay {
+    background-image: linear-gradient(
+        rgba(122, 182, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(122, 182, 255, 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
+
+/* Cinematic vignette over hero canvas */
+.vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(5, 6, 10, 0.7) 100%
+  );
+}
+
+/* Scrollbar — minimal */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

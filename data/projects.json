@@ -1,0 +1,185 @@
+[
+  {
+    "id": "clothes-ecommerce",
+    "index": "02",
+    "name": "Clothes E-Commerce Website",
+    "category": "Storefront SPA",
+    "summary": "Responsive React + Redux Toolkit storefront with REST integration and cross-browser polish.",
+    "description": "Built a responsive SPA with React.js and Redux Toolkit, improving load time by 35%. Implemented REST API integration and cross-browser compatibility for seamless UX across devices.",
+    "metrics": [
+      {
+        "label": "Load time",
+        "value": "−35%"
+      },
+      {
+        "label": "Compat",
+        "value": "99%"
+      },
+      {
+        "label": "Stack",
+        "value": "React"
+      }
+    ],
+    "stack": [
+      "React.js",
+      "Redux Toolkit",
+      "REST",
+      "CSS3"
+    ],
+    "architecture": [
+      "SPA Shell",
+      "Redux Store",
+      "Catalog API",
+      "Auth"
+    ],
+    "capsuleHue": 175,
+    "highlights": [
+      "35% faster load via code splitting and asset tuning",
+      "Cross-browser compatibility at 99%",
+      "Clean Redux Toolkit slices for cart, catalog, and auth"
+    ],
+    "links": []
+  },
+  {
+    "id": "amazon-ecommerce",
+    "index": "01",
+    "name": "Amazon E-Commerce Platform",
+    "category": "Full-Stack Commerce",
+    "summary": "Full-stack e-commerce solution with Angular + React + Next.js storefront and a Nest.js + MongoDB backend.",
+    "description": "Developed a full-stack e-commerce solution using Angular, React.js, Next.js, Nest.js, MongoDB, and Material UI. Achieved 30% faster API performance through optimized data fetching and Redux Toolkit state management.",
+    "metrics": [
+      {
+        "label": "API perf",
+        "value": "+30%"
+      },
+      {
+        "label": "Stack",
+        "value": "Multi"
+      },
+      {
+        "label": "State",
+        "value": "Redux TK"
+      }
+    ],
+    "stack": [
+      "Angular",
+      "React.js",
+      "Next.js",
+      "Nest.js",
+      "MongoDB",
+      "Material UI",
+      "Redux Toolkit"
+    ],
+    "architecture": [
+      "Storefront",
+      "Cart Service",
+      "API Gateway",
+      "Catalog API",
+      "MongoDB"
+    ],
+    "capsuleHue": 30,
+    "highlights": [
+      "Full-stack ownership across Angular, React, and Next.js surfaces",
+      "30% API performance lift via optimized fetching",
+      "Redux Toolkit state architecture across multi-app frontend"
+    ],
+    "links": []
+  },
+  {
+    "id": "movie-discovery",
+    "index": "03",
+    "name": "Movie Discovery Web App",
+    "category": "Search UI",
+    "summary": "Searchable movie UI hitting 98% mobile responsiveness with pure HTML/CSS/JS.",
+    "description": "Created a searchable UI using HTML5, CSS3, and JavaScript, achieving 98% mobile responsiveness via media queries and flex grid layouts. Zero framework, framework-free architecture.",
+    "metrics": [
+      {
+        "label": "Mobile resp.",
+        "value": "98%"
+      },
+      {
+        "label": "Stack",
+        "value": "Vanilla"
+      },
+      {
+        "label": "Layout",
+        "value": "Flex grid"
+      }
+    ],
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Flex Grid"
+    ],
+    "architecture": [
+      "Search UI",
+      "Filter Layer",
+      "Movie API"
+    ],
+    "capsuleHue": 285,
+    "highlights": [
+      "Pure HTML / CSS / JavaScript — no framework",
+      "98% mobile responsiveness across breakpoints",
+      "Clean flex-grid + media-query layout system"
+    ],
+    "links": []
+  },
+  {
+    "id": "ehsbha",
+    "index": "04",
+    "name": "Ehsbha — Driver Analytics SaaS",
+    "category": "Smart driver operating system",
+    "summary": "Production-grade SaaS dashboard for ride-share and delivery drivers across MENA — trips, expenses, maintenance, analytics, all offline-capable as a PWA.\n",
+    "description": "Smart operating system for ride-share / delivery / transportation drivers in Egypt and MENA. Web-only PWA on React 19 + Vite 6 with a NestJS 11 + Prisma 6 + PostgreSQL backend. 20 routes covering KPI dashboard, trip & expense CRUD, vehicle-health and true cost per km, driver score with 14-day history, smart decision recommendations, profit simulator, and bilingual Arabic/English RTL UI with dark/light themes. Money stored as integer piastres, distance in integer meters, idempotent writes via clientMutationId UUIDs, pre-computed daily/weekly/monthly aggregates for O(1) reads. JWT (HS256) auth with rotating refresh tokens and reuse detection, Argon2id password hashing, nightly cron aggregates.\n",
+    "metrics": [
+      {
+        "label": "Endpoints ",
+        "value": "33/33 "
+      },
+      {
+        "label": "Engine tests",
+        "value": "36/36"
+      },
+      {
+        "label": "PWA bundle",
+        "value": "~1.2 MB"
+      }
+    ],
+    "stack": [
+      "React 19",
+      "Vite 6",
+      "TypeScript",
+      "TypeScript",
+      "TailwindCSS",
+      "TanStack Query",
+      "Zustand",
+      "Framer Motion",
+      "Recharts",
+      "NestJS 11",
+      "Prisma 6",
+      "PostgreSQL",
+      "JWT",
+      "Argon2id",
+      "Workbox PWA"
+    ],
+    "architecture": [
+      "PWA Shell",
+      "NestJS API",
+      "Prisma ORM",
+      "Postgres (Neon)",
+      "JWT + Refresh Tokens",
+      "Cron Aggregates",
+      "Service Worker"
+    ],
+    "capsuleHue": 30,
+    "highlights": [
+      "Bilingual Arabic/English with full RTL + dark/light themes",
+      "Offline-first PWA (~1.2MB Workbox precache) with service-worker fallback",
+      "Money as integer piastres (EGP × 100) and distance as integer meters — zero float drift",
+      "Idempotent mutations via clientMutationId UUIDs; pre-computed aggregates for O(1) reads",
+      "33/33 backend smoke tests + 36/36 engine unit tests passing"
+    ],
+    "links": []
+  }
+]

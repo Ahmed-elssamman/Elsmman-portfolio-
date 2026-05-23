@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+dist
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Admin editor backups (timestamped pre-save snapshots)
+data/.backup/

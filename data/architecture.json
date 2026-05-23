@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    { "id": "client", "label": "Frontend Shell", "sub": "Angular · Next.js", "col": 0, "row": 1 },
+    { "id": "ui", "label": "UI Library", "sub": "Design system + primitives", "col": 1, "row": 0 },
+    { "id": "state", "label": "State Management", "sub": "Signals · RxJS · NgRx", "col": 1, "row": 2 },
+    { "id": "domain", "label": "Domain Libraries", "sub": "Nx feature libs", "col": 2, "row": 1 },
+    { "id": "api", "label": "API Layer", "sub": "REST · GraphQL", "col": 3, "row": 0 },
+    { "id": "realtime", "label": "Realtime Streams", "sub": "SignalR · WebSocket", "col": 3, "row": 2 },
+    { "id": "db", "label": "Persistence", "sub": "Mongo · SQL", "col": 4, "row": 1 }
+  ],
+  "flows": [
+    { "from": "client", "to": "ui" },
+    { "from": "client", "to": "state" },
+    { "from": "ui", "to": "domain" },
+    { "from": "state", "to": "domain" },
+    { "from": "domain", "to": "api" },
+    { "from": "domain", "to": "realtime" },
+    { "from": "api", "to": "db" },
+    { "from": "realtime", "to": "db" }
+  ]
+}

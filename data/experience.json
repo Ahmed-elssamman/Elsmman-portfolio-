@@ -1,0 +1,74 @@
+[
+  {
+    "id": "medica-scope",
+    "company": "Medica Scope",
+    "role": "Mid Frontend Developer",
+    "location": "Hybrid",
+    "type": "Full-time",
+    "start": "Feb 2026",
+    "end": "Present",
+    "summary": "Enterprise-grade LMS on Angular 21 in an Nx monorepo with SSR, SignalR realtime, and bilingual RTL support.",
+    "bullets": [
+      "Contributed to building an enterprise-grade LMS using Angular 21 within an Nx monorepo architecture, supporting multiple applications with SSR and scalable modular development.",
+      "Developed complex features including real-time data streaming with SignalR, dynamic forms, reusable data tables, multi-step wizards, role-based access control, and bilingual (Arabic/English) RTL support.",
+      "Built reusable, configuration-driven components and dynamic CRUD modules to accelerate delivery and ensure consistency across the platform.",
+      "Applied Clean Architecture, SOLID principles, and modern Angular patterns (Standalone Components, Signals, Functional Guards) to ensure maintainability and high code quality.",
+      "Implemented reactive programming (RxJS + Signals), lazy loading, HTTP interceptors, and performance optimization techniques for large-scale applications.",
+      "Integrated REST APIs, file uploads, data visualization (Chart.js, FullCalendar), and export utilities (Excel, PDF, CSV) for rich, data-driven user experiences.",
+      "Delivered responsive, accessible UIs using PrimeNG, TailwindCSS, and a custom design system aligned with product requirements.",
+      "Collaborated in an Agile (SCRUM) environment using Git, GitHub, Jira, and Figma to deliver production-ready features efficiently."
+    ],
+    "stack": ["Angular 21", "Nx", "SSR", "SignalR", "RxJS", "Signals", "PrimeNG", "Tailwind CSS", "Chart.js", "FullCalendar"]
+  },
+  {
+    "id": "ayen",
+    "company": "Ayen",
+    "role": "Frontend Developer",
+    "location": "Remote · Riyadh",
+    "type": "Contract",
+    "start": "Nov 2024",
+    "end": "Jan 2026",
+    "summary": "Modular Angular 15+ UI components, performance optimization, and REST API integrations.",
+    "bullets": [
+      "Built and optimized modular Angular 15+ UI components achieving 100% mobile-first compliance.",
+      "Improved page-load speed by 40% using lazy loading, code splitting, and image optimization.",
+      "Collaborated in Agile sprints with backend and UX teams through Jira and Slack.",
+      "Implemented RESTful API integrations that reduced response latency by 30%.",
+      "Conducted code reviews and enforced ESLint / Prettier standards, decreasing bugs by 20%."
+    ],
+    "stack": ["Angular 15+", "TypeScript", "RxJS", "REST", "ESLint", "Prettier"]
+  },
+  {
+    "id": "iti",
+    "company": "Information Technology Institute (ITI)",
+    "role": "Teaching Assistant",
+    "location": "Qena",
+    "type": "Part-time",
+    "start": "Nov 2024",
+    "end": "Present",
+    "summary": "Mentored MEARN Stack trainees on Angular, React, TypeScript, and modern frontend.",
+    "bullets": [
+      "Delivered technical sessions on Angular, React, TypeScript, and JavaScript (ES6+) for MEARN Stack trainees.",
+      "Mentored 30+ students through hands-on projects, focusing on component architecture and API integration.",
+      "Evaluated and refactored student code for scalability and performance, improving project success rate by 35%.",
+      "Introduced Agile Scrum practices and Git workflows, enhancing team collaboration and delivery efficiency."
+    ],
+    "stack": ["Angular", "React", "TypeScript", "JavaScript", "Git", "Agile/Scrum"]
+  },
+  {
+    "id": "sys-gate",
+    "company": "Sys Gate",
+    "role": "Odoo Developer",
+    "location": "Cairo",
+    "type": "Full-time",
+    "start": "Sep 2023",
+    "end": "May 2024",
+    "summary": "Extended and optimized ERP modules using Python on the Odoo Framework.",
+    "bullets": [
+      "Extended and optimized ERP modules using Python (Odoo Framework), boosting efficiency by 25%.",
+      "Refactored legacy OOP modules to enhance maintainability and reduce errors by 15%.",
+      "Collaborated with cross-functional teams to deliver customized business solutions on time."
+    ],
+    "stack": ["Python", "Odoo Framework", "PostgreSQL"]
+  }
+]

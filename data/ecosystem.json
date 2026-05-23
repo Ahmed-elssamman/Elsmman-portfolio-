@@ -1,0 +1,64 @@
+[
+  {
+    "id": "frontend",
+    "name": "Frontend Frameworks",
+    "hue": 0,
+    "summary": "Primary stack — enterprise UI.",
+    "nodes": [
+      { "id": "angular", "label": "Angular 21", "weight": 1 },
+      { "id": "react", "label": "React.js", "weight": 0.85 },
+      { "id": "next", "label": "Next.js", "weight": 0.85 },
+      { "id": "typescript", "label": "TypeScript", "weight": 0.95 },
+      { "id": "primeng", "label": "PrimeNG", "weight": 0.9 },
+      { "id": "tailwind", "label": "Tailwind CSS", "weight": 0.9 },
+      { "id": "sass", "label": "SASS", "weight": 0.7 },
+      { "id": "mui", "label": "Material UI", "weight": 0.7 }
+    ]
+  },
+  {
+    "id": "state",
+    "name": "State & Reactivity",
+    "hue": 200,
+    "summary": "State management across Angular & React.",
+    "nodes": [
+      { "id": "rxjs", "label": "RxJS", "weight": 0.95 },
+      { "id": "signals", "label": "Angular Signals", "weight": 0.9 },
+      { "id": "ngrx", "label": "NgRx", "weight": 0.85 },
+      { "id": "redux-tk", "label": "Redux Toolkit", "weight": 0.85 },
+      { "id": "context", "label": "React Context", "weight": 0.7 }
+    ]
+  },
+  {
+    "id": "backend",
+    "name": "Backend & APIs",
+    "hue": 140,
+    "summary": "Server-side surface I integrate against.",
+    "nodes": [
+      { "id": "node", "label": "Node.js", "weight": 0.8 },
+      { "id": "nest", "label": "Nest.js", "weight": 0.75 },
+      { "id": "express", "label": "Express", "weight": 0.7 },
+      { "id": "rest", "label": "REST", "weight": 0.95 },
+      { "id": "graphql", "label": "GraphQL", "weight": 0.7 },
+      { "id": "signalr", "label": "SignalR", "weight": 0.9 },
+      { "id": "mongo", "label": "MongoDB", "weight": 0.75 },
+      { "id": "strapi", "label": "Strapi", "weight": 0.6 },
+      { "id": "jwt", "label": "JWT Auth", "weight": 0.8 }
+    ]
+  },
+  {
+    "id": "tooling",
+    "name": "Tooling & Testing",
+    "hue": 80,
+    "summary": "Build, test, ship.",
+    "nodes": [
+      { "id": "vite", "label": "Vite", "weight": 0.8 },
+      { "id": "jest", "label": "Jest", "weight": 0.75 },
+      { "id": "jasmine", "label": "Jasmine", "weight": 0.75 },
+      { "id": "eslint", "label": "ESLint", "weight": 0.9 },
+      { "id": "prettier", "label": "Prettier", "weight": 0.9 },
+      { "id": "git", "label": "Git / GitHub", "weight": 0.95 },
+      { "id": "jira", "label": "Jira", "weight": 0.85 },
+      { "id": "figma", "label": "Figma", "weight": 0.85 }
+    ]
+  }
+]
