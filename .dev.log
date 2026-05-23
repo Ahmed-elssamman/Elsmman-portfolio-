@@ -12,11 +12,13 @@
  ✓ Compiled / in 1852ms (1926 modules)
  GET / 200 in 2179ms
  ✓ Compiled /src/middleware in 298ms (73 modules)
- ✓ Compiled /admin/27348/login in 288ms (1935 modules)
- GET /admin/27348/login 200 in 407ms
- GET / 200 in 177ms
- GET /admin/27348/login?next=%2Fadmin%2F27348 200 in 42ms
- ✓ Compiled /api/admin/login in 327ms (1044 modules)
+ ✓ Compiled    Reload env: .env.local
+ ✓ Compiled in 210ms (919 modules)
+   Reload env: .env.local
+ ✓ Compiled in 121ms (919 modules)
+   Reload env: .env.local
+ ✓ Compiled in 102ms (919 modules)
+in 327ms (1044 modules)
  POST /api/admin/login 200 in 392ms
  ○ Compiling /admin/27348 ...
  ✓ Compiled /admin/27348 in 575ms (1993 modules)
@@ -24,3 +26,62 @@
  ✓ Compiled /api/admin/[resource] in 210ms (1058 modules)
  PUT /api/admin/projects 200 in 611ms
  GET / 200 in 132ms
+   Reload env: .env.local
+ ✓ Compiled in 360ms (2035 modules)
+   Reload env: .env.local
+ ✓ Compiled in 225ms (2035 modules)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')
+    at rP (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:3772)
+    at J.ctx (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:6088)
+    at rU (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:6966)
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:5234
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\trace\tracer.js:122:103
+    at NoopContextManager.with (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NextTracerImpl.trace (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\trace\tracer.js:122:28)
+    at rL (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:5165)
+    at rW (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:12710)
+    at r0 (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:16204)
+    at r3 (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:23713)
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:726
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Object.wrap (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:36:17827)
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:616
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Object.wrap (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:36:16929)
+    at r8 (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:543)
+    at nh.render (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:4682)
+    at doRender (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1414:44)
+    at cacheEntry.responseCache.get.routeKind (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1575:34)
+    at ResponseCache.get (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\response-cache\index.js:49:26)
+    at DevServer.renderToResponseWithComponentsImpl (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1483:53)
+    at C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1003:121
+    at NextTracerImpl.trace (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\trace\tracer.js:105:20)
+    at DevServer.renderToResponseWithComponents (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1003:41)
+    at DevServer.renderPageComponent (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1911:35)
+    at async DevServer.renderToResponseImpl (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:1949:32)
+    at async DevServer.pipeImpl (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\base-server.js:817:17)
+    at async C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\router-server.js:173:21)
+    at async handleRequest (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\router-server.js:350:24)
+    at async requestHandlerImpl (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\router-server.js:374:13)
+    at async Server.requestListener (C:\Users\Admin\Desktop\portfolio\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  page: '/'
+}
+ ○ Compiling /_error ...
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\DumpStack.log.tmp'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\pagefile.sys'
+ ✓ Compiled /_error in 1105ms (2187 modules)
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\DumpStack.log.tmp'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\pagefile.sys'
+   Reload env: .env.local
+ ✓ Compiled in 274ms (2260 modules)
