@@ -5,31 +5,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Enterprise minimal-futuristic palette
         bg: {
-          DEFAULT: "#05060A",
-          elev: "#0A0C12",
-          panel: "#0E1118",
+          DEFAULT: "#070811",
+          elev: "#0C0E1A",
+          panel: "#10131F",
+          deep: "#04050B",
         },
         ink: {
-          DEFAULT: "#E6E8EE",
-          mute: "#8A92A6",
-          dim: "#5A6075",
+          DEFAULT: "#ECEEF5",
+          mute: "#9098AE",
+          dim: "#5C637A",
         },
         edge: {
-          DEFAULT: "#1A1F2C",
-          strong: "#262C3B",
+          DEFAULT: "#1C2236",
+          strong: "#2A314A",
         },
         accent: {
-          // Cool, architectural cyan-blue — restrained, not neon
           DEFAULT: "#7AB6FF",
-          glow: "#9FD0FF",
+          glow: "#A9D1FF",
           deep: "#3D7BD1",
         },
+        violet: {
+          DEFAULT: "#B07BFF",
+          glow: "#D2AEFF",
+        },
         signal: {
-          // For data-flow accents
           DEFAULT: "#5EE7C3",
           warm: "#FFB37A",
+          hot: "#FF6E9C",
         },
       },
       fontFamily: {
@@ -43,23 +46,28 @@ const config: Config = {
       },
       animation: {
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
-        "scan-line": "scan-line 8s linear infinite",
         "float-slow": "float-slow 9s ease-in-out infinite",
-        "fade-in": "fade-in 1s ease-out forwards",
+        "float-med": "float-med 6s ease-in-out infinite",
+        "fade-in": "fade-in 0.8s ease-out forwards",
         "blink": "blink 1.2s steps(1) infinite",
+        "spin-slow": "spin 24s linear infinite",
+        "spin-rev": "spin-rev 18s linear infinite",
+        "shimmer": "shimmer 3s linear infinite",
+        "aurora": "aurora 14s ease-in-out infinite",
+        "rise": "rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       keyframes: {
         "pulse-slow": {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.9" },
         },
-        "scan-line": {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(100vh)" },
-        },
         "float-slow": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-8px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "float-med": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "50%": { transform: "translateY(-6px) translateX(4px)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },
@@ -69,15 +77,38 @@ const config: Config = {
           "0%, 50%": { opacity: "1" },
           "50.01%, 100%": { opacity: "0" },
         },
+        "spin-rev": {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "aurora": {
+          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)", opacity: "0.55" },
+          "50%": { transform: "translate3d(2%,-3%,0) scale(1.08)", opacity: "0.85" },
+        },
+        "rise": {
+          "0%": { opacity: "0", transform: "translateY(18px)" },
+          "100%": { opacity: "1", transform: "translateY(0px)" },
+        },
       },
       backgroundImage: {
         "grid-fine":
           "linear-gradient(rgba(122,182,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(122,182,255,0.05) 1px, transparent 1px)",
         "radial-glow":
-          "radial-gradient(ellipse at center, rgba(122,182,255,0.15) 0%, transparent 60%)",
+          "radial-gradient(ellipse at center, rgba(122,182,255,0.18) 0%, transparent 60%)",
+        "mesh-1":
+          "radial-gradient(ellipse 60% 50% at 20% 30%, rgba(122,182,255,0.18), transparent 65%), radial-gradient(ellipse 55% 45% at 80% 70%, rgba(176,123,255,0.18), transparent 65%), radial-gradient(ellipse 45% 35% at 60% 20%, rgba(94,231,195,0.12), transparent 60%)",
       },
       backgroundSize: {
         "grid-fine": "48px 48px",
+      },
+      boxShadow: {
+        glow: "0 0 0 1px rgba(122,182,255,0.12), 0 18px 60px -20px rgba(122,182,255,0.25)",
+        "glow-violet":
+          "0 0 0 1px rgba(176,123,255,0.18), 0 18px 60px -20px rgba(176,123,255,0.3)",
       },
     },
   },

@@ -1,33 +1,33 @@
 {
   "name": "Ahmed ElSamman",
-  "role": "Mid Frontend Developer",
-  "tagline": "Frontend engineer building enterprise-grade Angular platforms — Nx monorepos, realtime systems, and production-ready UIs.",
+  "role": "Frontend Software Engineer",
+  "tagline": "Frontend Software Engineer building scalable enterprise-grade applications with Angular 21, Nx monorepos, SSR, SignalR realtime, and multi-tenant architectures.",
   "location": "Cairo, Egypt",
   "status": "Open to senior frontend opportunities",
-  "shortBio": "Frontend developer with 2+ years building scalable Angular applications, enterprise LMS platforms, and high-performance web experiences. Currently shipping Angular 21 / Nx monorepo features with SignalR realtime and bilingual RTL support at Medica Scope.",
+  "shortBio": "Frontend Software Engineer specialized in enterprise-grade Angular applications — multi-tenant systems, SSR-enabled apps, real-time features, RBAC layers, and reusable component-driven architectures in Nx monorepo environments. Currently shipping Angular 21 + SignalR + bilingual RTL features at Medica Scope.",
   "identityNarrative": [
     {
       "heading": "From ERP systems to enterprise frontend",
-      "body": "I started inside business systems — building and refactoring Odoo ERP modules at Sys Gate. That work taught me to model real businesses in code: domain boundaries, audit trails, reliability under load."
+      "body": "I started inside business systems — building and refactoring Odoo ERP modules at Sys Gate. That work taught me to model real businesses in code: domain boundaries, audit trails, and reliability under load."
     },
     {
       "heading": "Into scalable Angular architecture",
       "body": "At Ayen and now Medica Scope I moved that systems thinking into the frontend — composing Angular 21 workspaces in Nx, building reusable configuration-driven libraries, and treating the browser as a first-class runtime for enterprise software."
     },
     {
-      "heading": "Realtime, RTL, clean architecture",
-      "body": "Today I focus on enterprise LMS work: SignalR realtime streams, bilingual Arabic/English RTL, Standalone Components + Signals, Clean Architecture and SOLID. I also teach MEARN Stack trainees at ITI Qena and mentor 30+ students through their graduation projects."
+      "heading": "Realtime · RTL · Clean Architecture",
+      "body": "Today I focus on enterprise LMS work: SignalR realtime streams, bilingual Arabic/English RTL, Standalone Components + Signals, Clean Architecture and SOLID. I also teach MEARN Stack trainees at ITI and mentor 30+ students through their graduation projects."
     }
   ],
   "achievements": [
     "Improved page-load speed by 40% across Ayen client projects via lazy loading, code splitting, and image optimization",
-    "Reduced REST API response latency by 30% with optimized data fetching strategies",
-    "Decreased production bug rate by 20% through enforced code review and ESLint/Prettier standards",
+    "Reduced REST API response latency by 30% with optimized data-fetching strategies",
+    "Decreased production bug rate by 20% through enforced code review and ESLint / Prettier standards",
     "Lifted ITI student graduation project success rate by 35% through mentoring and code refactoring",
     "Boosted Sys Gate ERP module efficiency by 25% and reduced legacy errors by 15%"
   ],
   "links": {
-    "github": "https://github.com/Ahmed-elsamman",
+    "github": "https://github.com/Ahmed-elssamman",
     "linkedin": "https://www.linkedin.com/in/ahmedelssamman/",
     "email": "ahmed.elssamman@gmail.com",
     "phone": "+20 111 612 3202",
@@ -36,10 +36,10 @@
   "telemetry": [
     {
       "k": "Role",
-      "v": "Mid Frontend Developer"
+      "v": "Frontend SW Engineer"
     },
     {
-      "k": "Focus",
+      "k": "Stack",
       "v": "Angular 21 · Nx · SignalR"
     },
     {

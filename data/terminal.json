@@ -2,16 +2,16 @@
   "prompt": "ahmed@systems",
   "cwd": "~/engineering",
   "lines": [
-    { "cmd": "whoami", "out": "Ahmed ElSamman — Mid Frontend Developer · Medica Scope" },
-    { "cmd": "cat role.txt", "out": "Building enterprise Angular platforms. Realtime systems. Bilingual RTL UIs." },
+    { "cmd": "whoami", "out": "Ahmed ElSamman — Frontend Software Engineer · Medica Scope" },
+    { "cmd": "cat role.txt", "out": "Building enterprise Angular platforms. Multi-tenant systems. Realtime + RTL UIs." },
     {
       "cmd": "ls -1 specialization/",
-      "out": "angular-21\nnx-monorepos\nssr-and-streaming\nrealtime-signalr\nclean-architecture\nbilingual-rtl"
+      "out": "angular-21\nnx-monorepos\nssr-and-streaming\nrealtime-signalr\nrbac-systems\nmulti-tenant\nclean-architecture\nbilingual-rtl"
     },
     {
       "cmd": "cat focus/now.md",
-      "out": "Enterprise LMS · Configuration-driven CRUD · Performance optimization at scale"
+      "out": "Enterprise LMS · Configuration-driven CRUD · RBAC · Performance optimization at scale"
     },
-    { "cmd": "uptime", "out": "operational · open to new opportunities" }
+    { "cmd": "uptime", "out": "operational · open to senior frontend opportunities" }
   ]
 }

@@ -16,7 +16,6 @@ export function ContactSection({ profile }: { profile: Profile }) {
     e.preventDefault();
     if (status !== "idle") return;
     setStatus("sending");
-    // Open the user's mail client with a pre-filled message — works without a backend.
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
     const body = encodeURIComponent(
       `From: ${form.name} <${form.email}>\n\n${form.message}`
@@ -68,13 +67,18 @@ export function ContactSection({ profile }: { profile: Profile }) {
       id="contact"
       index="08"
       eyebrow="Contact"
-      title="Open a channel."
+      tone="accent"
+      title={
+        <>
+          Open a <span className="gradient-text">channel.</span>
+        </>
+      }
       description="Use the console below to start a conversation, or take a direct line through any of the channels."
     >
-      <div className="grid md:grid-cols-12 gap-6 md:gap-8">
+      <div className="grid md:grid-cols-12 gap-5 md:gap-8">
         <div className="md:col-span-7">
-          <div className="glass-panel hairline rounded-sm overflow-hidden">
-            <div className="flex items-center justify-between px-5 py-3 border-b border-edge font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
+          <div className="glass-panel hairline rounded-sm overflow-hidden ring-glow">
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-edge font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
               <span className="text-accent">▶ comms.console</span>
               <span className="flex items-center gap-2 text-signal">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal animate-pulse" />
@@ -114,14 +118,15 @@ export function ContactSection({ profile }: { profile: Profile }) {
                 <button
                   type="submit"
                   disabled={status !== "idle"}
-                  className="group inline-flex items-center gap-2 border border-accent/40 bg-accent/5 px-5 py-2.5 text-sm tracking-wide text-ink hover:bg-accent/10 transition disabled:opacity-60"
+                  className="group relative inline-flex items-center gap-2 overflow-hidden border border-accent/50 bg-accent/10 px-5 py-3 text-sm tracking-wide text-ink hover:bg-accent/20 transition disabled:opacity-60"
                 >
-                  <span>
+                  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-accent/30 to-transparent group-hover:translate-x-full transition-transform duration-700" />
+                  <span className="relative">
                     {status === "idle" && "Transmit"}
                     {status === "sending" && "Transmitting…"}
                     {status === "sent" && "Sent"}
                   </span>
-                  <span className="text-accent transition group-hover:translate-x-0.5">
+                  <span className="relative text-accent transition-transform group-hover:translate-x-1">
                     {status === "sent" ? "✓" : "→"}
                   </span>
                 </button>
@@ -130,7 +135,7 @@ export function ContactSection({ profile }: { profile: Profile }) {
           </div>
         </div>
 
-        <div className="md:col-span-5 space-y-4">
+        <div className="md:col-span-5 space-y-3 sm:space-y-4">
           {channels.map((c) => (
             <ChannelCard key={c.label} {...c} />
           ))}
@@ -201,22 +206,22 @@ function ChannelCard({
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: easing.enter }}
+      transition={{ duration: 0.5, ease: easing.enter }}
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel="noreferrer"
-      className="group block glass-panel hairline rounded-sm p-5 transition border border-edge hover:border-accent/40"
+      className="group block glass-panel hairline rounded-sm p-4 sm:p-5 transition border border-edge hover:border-violet/40"
     >
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
             {label}
           </div>
-          <div className="mt-1.5 font-display text-base md:text-lg tracking-tight text-ink truncate">
+          <div className="mt-1.5 font-display text-sm sm:text-base md:text-lg tracking-tight text-ink truncate">
             {value}
           </div>
         </div>
-        <span className="text-accent text-lg transition group-hover:translate-x-0.5 shrink-0">
+        <span className="text-violet text-lg transition group-hover:translate-x-0.5 shrink-0">
           ↗
         </span>
       </div>
@@ -226,9 +231,9 @@ function ChannelCard({
 
 function Footer({ name, role }: { name: string; role: string }) {
   return (
-    <div className="mt-16 md:mt-20 pt-8 border-t border-edge flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
+    <div className="mt-14 md:mt-20 pt-8 border-t border-edge flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
       <span>© 2026 {name} · {role}</span>
-      <span>Built with Next.js · R3F · Framer · Lenis</span>
+      <span>Built with Next.js · Framer Motion · Tailwind</span>
     </div>
   );
 }

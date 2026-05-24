@@ -11,7 +11,7 @@ import { TerminalSection } from "@/sections/TerminalSection";
 import { ContactSection } from "@/sections/ContactSection";
 import { loadAll } from "@/lib/data";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function Home() {
   const data = await loadAll();

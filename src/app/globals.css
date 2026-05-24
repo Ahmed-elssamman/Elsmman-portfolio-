@@ -8,26 +8,26 @@
   --font-display: "Inter", system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  background: #05060A;
-  color: #E6E8EE;
+  background: #070811;
+  color: #ECEEF5;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+body {
+  /* Base ambient color wash — extremely cheap (pure CSS, no JS) */
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(122, 182, 255, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 20%, rgba(176, 123, 255, 0.07), transparent 65%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(94, 231, 195, 0.05), transparent 60%);
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -35,7 +35,6 @@ html.lenis body {
   color: #ffffff;
 }
 
-/* Custom utility: thin top hairline used across panels */
 @layer utilities {
   .hairline {
     position: relative;
@@ -48,10 +47,11 @@ html.lenis body {
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(122, 182, 255, 0.35) 30%,
-      rgba(122, 182, 255, 0.35) 70%,
+      rgba(122, 182, 255, 0.4) 30%,
+      rgba(176, 123, 255, 0.4) 70%,
       transparent
     );
+    pointer-events: none;
   }
 
   .text-balance {
@@ -61,38 +61,73 @@ html.lenis body {
   .glass-panel {
     background: linear-gradient(
       180deg,
-      rgba(14, 17, 24, 0.6),
-      rgba(10, 12, 18, 0.4)
+      rgba(16, 19, 31, 0.7),
+      rgba(12, 14, 26, 0.5)
     );
-    border: 1px solid rgba(38, 44, 59, 0.6);
-    backdrop-filter: blur(12px);
+    border: 1px solid rgba(42, 49, 74, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .grid-overlay {
     background-image: linear-gradient(
-        rgba(122, 182, 255, 0.04) 1px,
+        rgba(122, 182, 255, 0.05) 1px,
         transparent 1px
       ),
-      linear-gradient(90deg, rgba(122, 182, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(122, 182, 255, 0.05) 1px, transparent 1px);
     background-size: 64px 64px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      120deg,
+      #ECEEF5 0%,
+      #A9D1FF 40%,
+      #D2AEFF 70%,
+      #ECEEF5 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .stroke-text {
+    -webkit-text-stroke: 1px rgba(236, 238, 245, 0.3);
+    color: transparent;
+  }
+
+  .ring-glow {
+    box-shadow:
+      0 0 0 1px rgba(122, 182, 255, 0.15) inset,
+      0 0 60px -10px rgba(122, 182, 255, 0.25);
   }
 }
 
-/* Cinematic vignette over hero canvas */
-.vignette::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 50%,
-    rgba(5, 6, 10, 0.7) 100%
-  );
+/* Custom scrollbar — slim and themed */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2A314A, #1C2236);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3D7BD1, #2A314A);
 }
 
-/* Scrollbar — minimal */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

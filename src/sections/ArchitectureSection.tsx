@@ -30,13 +30,21 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
       id="architecture"
       index="04"
       eyebrow="Architecture"
-      title="The system underneath the surface."
-      description="A reference architecture I bring to enterprise frontends — modular, observable, and tuned for realtime data flow."
+      tone="accent"
+      title={
+        <>
+          The <span className="gradient-text">system</span> underneath the surface.
+        </>
+      }
+      description="A reference architecture I bring to enterprise frontends — modular, observable, tuned for realtime data flow."
     >
       <div className="relative glass-panel hairline rounded-sm overflow-hidden">
-        <div className="flex items-center justify-between px-5 py-3 border-b border-edge font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
+        <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-edge font-mono text-[10px] uppercase tracking-[0.32em] text-ink-dim">
           <span className="text-accent">▶ system.topology</span>
-          <span>realtime</span>
+          <span className="flex items-center gap-2 text-signal">
+            <span className="h-1.5 w-1.5 rounded-full bg-signal animate-pulse" />
+            realtime
+          </span>
         </div>
 
         <div className="relative overflow-x-auto">
@@ -50,11 +58,11 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
             <defs>
               <linearGradient id={`${gradId}-flow`} x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stopColor="#7AB6FF" stopOpacity="0" />
-                <stop offset="50%" stopColor="#9FD0FF" stopOpacity="0.9" />
+                <stop offset="50%" stopColor="#A9D1FF" stopOpacity="0.9" />
                 <stop offset="100%" stopColor="#5EE7C3" stopOpacity="0" />
               </linearGradient>
               <radialGradient id={`${gradId}-node`}>
-                <stop offset="0%" stopColor="#7AB6FF" stopOpacity="0.18" />
+                <stop offset="0%" stopColor="#7AB6FF" stopOpacity="0.22" />
                 <stop offset="100%" stopColor="#7AB6FF" stopOpacity="0" />
               </radialGradient>
             </defs>
@@ -77,18 +85,18 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
                   />
                   <motion.circle
                     r={3}
-                    fill="#9FD0FF"
+                    fill="#A9D1FF"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     animate={{ cx: [A.x, B.x], cy: [A.y, B.y] }}
                     transition={{
-                      duration: 2.6,
-                      delay: i * 0.25,
+                      duration: 2.4,
+                      delay: i * 0.2,
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    style={{ filter: "drop-shadow(0 0 6px #9FD0FF)" }}
+                    style={{ filter: "drop-shadow(0 0 6px #A9D1FF)" }}
                   />
                 </g>
               );
@@ -103,8 +111,8 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{
-                    duration: 0.7,
-                    delay: i * 0.07,
+                    duration: 0.6,
+                    delay: i * 0.06,
                     ease: easing.enter,
                   }}
                 >
@@ -127,7 +135,7 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
                     x={c.x}
                     y={c.y - 6}
                     textAnchor="middle"
-                    fill="#E6E8EE"
+                    fill="#ECEEF5"
                     fontSize="13"
                     fontFamily="var(--font-sans)"
                     fontWeight={500}
@@ -138,7 +146,7 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
                     x={c.x}
                     y={c.y + 14}
                     textAnchor="middle"
-                    fill="#8A92A6"
+                    fill="#9098AE"
                     fontSize="10"
                     fontFamily="var(--font-mono)"
                     letterSpacing="1"
@@ -151,7 +159,7 @@ export function ArchitectureSection({ data }: { data: Architecture }) {
           </svg>
         </div>
 
-        <div className="px-5 py-3 border-t border-edge flex flex-wrap items-center gap-4 sm:gap-6 font-mono text-[10px] uppercase tracking-[0.3em] text-ink-dim">
+        <div className="px-4 sm:px-5 py-3 border-t border-edge flex flex-wrap items-center gap-3 sm:gap-6 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-ink-dim">
           <span className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             data-flow

@@ -38,7 +38,10 @@
       "Bash(curl -s -o /dev/null -w \"admin:%{http_code}\\\\n\" http://localhost:3000/admin/27348)",
       "Bash(curl -s -o /dev/null -w \"login:%{http_code}\\\\n\" http://localhost:3000/admin/27348/login)",
       "Bash(gh api *)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "mcp__angular-cli__list_projects",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"Subsequent HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/)"
     ]
   }
 }
