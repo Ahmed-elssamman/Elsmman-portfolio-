@@ -1,148 +1,124 @@
 [
   {
-    "id": "rwaq-lms",
+    "id": "ehsbha",
     "index": "01",
-    "name": "Rwaq LMS Platform",
-    "category": "Enterprise LMS · Multi-tenant",
-    "summary": "Enterprise LMS platform built on Angular 21 + Nx monorepo with SSR, RBAC, multi-tenant architecture, real-time systems, and a library of reusable enterprise components.",
-    "description": "Enterprise-grade LMS platform supporting multiple applications inside an Nx monorepo. Built with Angular 21, SSR, SignalR realtime, RBAC, bilingual RTL (Arabic/English), and a reusable configuration-driven component library powering dynamic CRUD, multi-step wizards, advanced data tables, and dynamic forms. Architected with Clean Architecture, SOLID principles, Standalone Components, Signals, and Functional Guards.",
-    "metrics": [
-      { "label": "Stack", "value": "Angular 21" },
-      { "label": "Realtime", "value": "SignalR" },
-      { "label": "Tenants", "value": "Multi" }
+    "name": "Ehsebha",
+    "category": "Driver analytics · React",
+    "summary": "A clearer picture of the working day. An Arabic-first dashboard that brings trips, expenses, and driver earnings together.",
+    "description": "Drivers work across several apps, but their real earnings depend on fuel, commission, and maintenance. Ehsebha brings those details into a bilingual web app, with a dashboard, trip management, vehicle costs, and a profit simulator. The frontend pairs React with TanStack Query and an installable PWA shell.",
+    "image": "/images/projects/ehsbha.webp",
+    "imageAlt": "Ehsebha welcome page with driver earnings features and sign-in form.",
+    "previewNote": "Captured from the public demo. Sign-in was unavailable during the September 2026 review; the linked source code shows the application features.",
+    "metrics": [],
+    "stack": [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "NestJS",
+      "PostgreSQL"
     ],
+    "architecture": [
+      "React PWA",
+      "TanStack Query",
+      "NestJS API",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "capsuleHue": 145,
+    "highlights": [
+      "Arabic-first interface with English and RTL/LTR support",
+      "Trips, expenses, vehicle costs, and analytics in one workspace",
+      "Client-side profit simulator for exploring different working scenarios",
+      "Installable PWA with a separate administration app"
+    ],
+    "links": [
+      {
+        "label": "Live demo",
+        "href": "https://erd-ehsbha-web.vercel.app"
+      },
+      {
+        "label": "Source code",
+        "href": "https://github.com/Ahmed-elssamman/ERD-Ehsbha"
+      }
+    ]
+  },
+  {
+    "id": "online-exam",
+    "index": "02",
+    "name": "Online Exam",
+    "category": "Learning platform · Angular",
+    "summary": "From choosing a subject to reviewing an answer. A focused exam experience built around progress, timing, and feedback.",
+    "description": "An exam flow needs to keep students oriented while time is running. This Angular application connects diploma browsing, timed questions, saved answer progress, and a review screen. Authentication is separated into a reusable library, while lazy-loaded routes keep the feature structure clear.",
+    "image": "/images/projects/online-exam.webp",
+    "imageAlt": "Online Exam sign-in page captured from the Angular application running locally.",
+    "previewNote": "Local capture of the public repository. The previously listed hosted demo was unavailable during review.",
+    "metrics": [],
     "stack": [
       "Angular 21",
-      "Nx",
-      "SSR",
-      "SignalR",
-      "RxJS",
+      "TypeScript",
       "Signals",
+      "RxJS",
       "PrimeNG",
       "Tailwind CSS"
     ],
     "architecture": [
-      "Frontend Shell",
-      "Feature Libs",
-      "RBAC Layer",
-      "SignalR Stream",
-      "REST APIs"
+      "Lazy-loaded features",
+      "Auth library",
+      "Angular Signals",
+      "REST API"
     ],
-    "capsuleHue": 210,
+    "capsuleHue": 225,
     "highlights": [
-      "Multi-tenant, multi-application architecture inside an Nx monorepo with SSR",
-      "Realtime data streaming via SignalR + Angular Signals",
-      "Reusable, configuration-driven CRUD modules accelerating delivery",
-      "Bilingual Arabic/English RTL with role-based access control",
-      "Clean Architecture + SOLID — Standalone Components, Signals, Functional Guards"
-    ],
-    "links": []
-  },
-  {
-    "id": "ehsbha",
-    "index": "02",
-    "name": "Ehsebha — Driver Analytics SaaS",
-    "category": "Smart Driver Operating System",
-    "summary": "Production-grade SaaS dashboard for ride-share and delivery drivers across MENA — trips, expenses, maintenance, analytics, all offline-capable as a PWA.",
-    "description": "Smart operating system for ride-share / delivery / transportation drivers in Egypt and MENA. Web-only PWA on React 19 + Vite 6 with a NestJS 11 + Prisma 6 + PostgreSQL backend. 20+ routes covering KPI dashboard, trip & expense CRUD, vehicle-health and true cost per km, driver score with 14-day history, smart decision recommendations, profit simulator, and bilingual Arabic/English RTL UI with dark/light themes. Money stored as integer piastres, distance in integer meters, idempotent writes via clientMutationId UUIDs, pre-computed daily/weekly/monthly aggregates for O(1) reads. JWT (HS256) auth with rotating refresh tokens and reuse detection, Argon2id password hashing, nightly cron aggregates.",
-    "metrics": [
-      { "label": "Endpoints", "value": "33/33" },
-      { "label": "Engine tests", "value": "36/36" },
-      { "label": "PWA bundle", "value": "~1.2 MB" }
-    ],
-    "stack": [
-      "React 19",
-      "Vite 6",
-      "TypeScript",
-      "TailwindCSS",
-      "TanStack Query",
-      "Zustand",
-      "Framer Motion",
-      "Recharts",
-      "NestJS 11",
-      "Prisma 6",
-      "PostgreSQL",
-      "JWT",
-      "Argon2id",
-      "Workbox PWA"
-    ],
-    "architecture": [
-      "PWA Shell",
-      "NestJS API",
-      "Prisma ORM",
-      "Postgres (Neon)",
-      "JWT + Refresh",
-      "Cron Aggregates",
-      "Service Worker"
-    ],
-    "capsuleHue": 30,
-    "highlights": [
-      "Bilingual Arabic/English with full RTL + dark/light themes",
-      "Offline-first PWA (~1.2 MB Workbox precache) with service-worker fallback",
-      "Money as integer piastres (EGP × 100) and distance as integer meters — zero float drift",
-      "Idempotent mutations via clientMutationId UUIDs; pre-computed aggregates for O(1) reads",
-      "33/33 backend smoke tests + 36/36 engine unit tests passing"
+      "Timed questions with progress indicators and saved answers",
+      "Diploma browsing, exam navigation, and answer review",
+      "Reusable authentication library with typed request contracts",
+      "Standalone components, Signals, and lazy-loaded feature routes"
     ],
     "links": [
-      { "label": "Live Demo", "href": "https://ehsebha.vercel.app/" }
+      {
+        "label": "Source code",
+        "href": "https://github.com/Ahmed-elssamman/online-exam"
+      }
     ]
   },
   {
-    "id": "amazon-ecommerce",
+    "id": "postify",
     "index": "03",
-    "name": "Amazon E-Commerce Platform",
-    "category": "Full-Stack Commerce",
-    "summary": "Full-stack e-commerce platform with Angular + React + Next.js storefronts and a NestJS + MongoDB backend, with optimized state management.",
-    "description": "Built a full-stack e-commerce solution using Angular, React.js, Next.js, NestJS, MongoDB, and Material UI. Achieved 30% faster API performance through optimized data fetching and Redux Toolkit state management across multi-app frontends.",
-    "metrics": [
-      { "label": "API perf", "value": "+30%" },
-      { "label": "Stack", "value": "Multi-app" },
-      { "label": "State", "value": "Redux TK" }
-    ],
+    "name": "Postify",
+    "category": "Editorial interface · Angular",
+    "summary": "A small application with attention to the everyday details: finding a post, reading a discussion, and getting useful feedback.",
+    "description": "Postify explores the full reading and writing flow around a posts API. Readers can search a responsive card grid, open a post, and browse comments. Angular Signal Forms handle validation, with loading skeletons, empty states, and toast feedback throughout. JSONPlaceholder simulates submissions, so new posts and comments are not persisted.",
+    "image": "/images/projects/postify.webp",
+    "imageAlt": "Postify interface captured from the Angular application running locally.",
+    "previewNote": "Local capture of the public repository. JSONPlaceholder simulates submissions; new posts and comments are not persisted.",
+    "metrics": [],
     "stack": [
-      "Angular",
-      "React.js",
-      "Next.js",
-      "NestJS",
-      "MongoDB",
-      "Material UI",
-      "Redux Toolkit"
+      "Angular 21",
+      "TypeScript",
+      "Signals",
+      "Signal Forms",
+      "Tailwind CSS",
+      "REST API"
     ],
     "architecture": [
-      "Storefront",
-      "Cart Service",
-      "API Gateway",
-      "Catalog API",
-      "MongoDB"
+      "Standalone components",
+      "Signal Forms",
+      "HTTP interceptors",
+      "JSONPlaceholder"
     ],
-    "capsuleHue": 280,
+    "capsuleHue": 30,
     "highlights": [
-      "Full-stack ownership across Angular, React, and Next.js surfaces",
-      "30% API performance lift via optimized fetching",
-      "Redux Toolkit state architecture across multi-app frontend"
+      "Live title search with signal-based filtering",
+      "Post details, comments, and validated submission forms",
+      "Loading skeletons, empty states, and clear request feedback",
+      "JSONPlaceholder demo API; submissions are simulated"
     ],
-    "links": []
-  },
-  {
-    "id": "clothes-ecommerce",
-    "index": "04",
-    "name": "Clothes E-Commerce Website",
-    "category": "Storefront SPA",
-    "summary": "Responsive React + Redux Toolkit storefront with REST integration and cross-browser polish.",
-    "description": "Built a responsive SPA with React.js and Redux Toolkit, improving load time by 35%. Implemented REST API integration and cross-browser compatibility for seamless UX across devices.",
-    "metrics": [
-      { "label": "Load time", "value": "−35%" },
-      { "label": "Compat", "value": "99%" },
-      { "label": "Stack", "value": "React" }
-    ],
-    "stack": ["React.js", "Redux Toolkit", "REST", "CSS3"],
-    "architecture": ["SPA Shell", "Redux Store", "Catalog API", "Auth"],
-    "capsuleHue": 170,
-    "highlights": [
-      "35% faster load via code splitting and asset tuning",
-      "Cross-browser compatibility at 99%",
-      "Clean Redux Toolkit slices for cart, catalog, and auth"
-    ],
-    "links": []
+    "links": [
+      {
+        "label": "Source code",
+        "href": "https://github.com/Ahmed-elssamman/Postify-app"
+      }
+    ]
   }
 ]

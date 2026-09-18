@@ -10,3 +10,9 @@ next-env.d.ts
 
 # Admin editor backups (timestamped pre-save snapshots)
 data/.backup/
+
+# Local browser checks and Lighthouse reports
+artifacts/
+
+# Local project research checkouts
+.research/

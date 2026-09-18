@@ -200,7 +200,7 @@ export function SaveBar({
 }) {
   return (
     <div className="sticky bottom-0 mt-6 -mx-5 md:-mx-6 px-5 md:px-6 py-3 bg-bg/95 backdrop-blur border-t border-edge flex flex-wrap items-center gap-3 justify-between">
-      <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-dim">
+      <div role="status" aria-live="polite" className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-dim">
         {status === "saving" && "Saving…"}
         {status === "saved" && (
           <span className="text-signal">● Saved</span>
@@ -217,7 +217,7 @@ export function SaveBar({
         className="inline-flex items-center gap-2 border border-accent/40 bg-accent/5 px-4 py-2 text-sm tracking-wide text-ink hover:bg-accent/10 transition disabled:opacity-50"
       >
         {status === "saving" ? "Saving…" : "Save changes"}
-        <span className="text-accent">→</span>
+        <span className="text-accent" aria-hidden="true">→</span>
       </button>
     </div>
   );
@@ -238,7 +238,7 @@ export function ListCard({
 }) {
   return (
     <div className="border border-edge rounded-sm p-4 bg-bg-elev/40">
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
         <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-ink">
           {title}
         </div>
@@ -304,10 +304,21 @@ export function moveItem<T>(arr: T[], i: number, delta: number): T[] {
   return next;
 }
 
+interface SaveResourceResponse {
+  ok: boolean;
+  error?: string;
+}
+
+interface ResourceErrorResponse {
+  error?: string;
+  detail?: string;
+  issues?: { path: (string | number)[]; message: string }[];
+}
+
 export async function saveResource<T>(
   resource: string,
   value: T
-): Promise<{ ok: boolean; error?: string }> {
+): Promise<SaveResourceResponse> {
   try {
     const res = await fetch(`/api/admin/${resource}`, {
       method: "PUT",
@@ -315,8 +326,10 @@ export async function saveResource<T>(
       body: JSON.stringify(value),
     });
     if (!res.ok) {
-      const j = await res.json().catch(() => ({}));
-      return { ok: false, error: j?.error || `HTTP ${res.status}` };
+      const result: ResourceErrorResponse = await res.json().catch(() => ({}));
+      const issue = result.issues?.[0];
+      const validation = issue ? issue.path.join(" → ") + ": " + issue.message : "";
+      return { ok: false, error: validation || result.detail || result.error || "HTTP " + res.status };
     }
     return { ok: true };
   } catch (err) {

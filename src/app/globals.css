@@ -3,131 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-display: "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-display: var(--font-sans), Arial, sans-serif;
+  color-scheme: light;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  background: #070811;
-  color: #ECEEF5;
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  /* Base ambient color wash — extremely cheap (pure CSS, no JS) */
-  background-image:
-    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(122, 182, 255, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 85% 20%, rgba(176, 123, 255, 0.07), transparent 65%),
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(94, 231, 195, 0.05), transparent 60%);
-  background-attachment: fixed;
-}
-
-::selection {
-  background: rgba(122, 182, 255, 0.3);
-  color: #ffffff;
-}
-
-@layer utilities {
-  .hairline {
-    position: relative;
-  }
-  .hairline::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(122, 182, 255, 0.4) 30%,
-      rgba(176, 123, 255, 0.4) 70%,
-      transparent
-    );
-    pointer-events: none;
-  }
-
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .glass-panel {
-    background: linear-gradient(
-      180deg,
-      rgba(16, 19, 31, 0.7),
-      rgba(12, 14, 26, 0.5)
-    );
-    border: 1px solid rgba(42, 49, 74, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  .grid-overlay {
-    background-image: linear-gradient(
-        rgba(122, 182, 255, 0.05) 1px,
-        transparent 1px
-      ),
-      linear-gradient(90deg, rgba(122, 182, 255, 0.05) 1px, transparent 1px);
-    background-size: 64px 64px;
-  }
-
-  .gradient-text {
-    background: linear-gradient(
-      120deg,
-      #ECEEF5 0%,
-      #A9D1FF 40%,
-      #D2AEFF 70%,
-      #ECEEF5 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmer 6s linear infinite;
-  }
-
-  .stroke-text {
-    -webkit-text-stroke: 1px rgba(236, 238, 245, 0.3);
-    color: transparent;
-  }
-
-  .ring-glow {
-    box-shadow:
-      0 0 0 1px rgba(122, 182, 255, 0.15) inset,
-      0 0 60px -10px rgba(122, 182, 255, 0.25);
-  }
-}
-
-/* Custom scrollbar — slim and themed */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2A314A, #1C2236);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #3D7BD1, #2A314A);
-}
-
+html { scroll-behavior: smooth; background: #f7f7f0; }
+html[data-theme="dark"] { color-scheme: dark; background: #1b211c; }
+body { margin: 0; font-family: var(--font-sans), Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+button, input, textarea, select { font: inherit; }
+button, a, input, textarea, select, summary { touch-action: manipulation; }
+.glass-panel { background: #10131f; border: 1px solid #2a314a; }
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  html { scroll-behavior: auto; }
 }

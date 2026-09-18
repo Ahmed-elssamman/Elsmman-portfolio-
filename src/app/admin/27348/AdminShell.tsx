@@ -4,8 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { SiteData } from "@/lib/data-schemas";
 import { ProfileTab } from "./tabs/ProfileTab";
-import { ExperienceTab } from "./tabs/ExperienceTab";
-import { ProjectsTab } from "./tabs/ProjectsTab";
+import { ExperienceTab } from "./tabs/experience-tab";
+import { ProjectsTab } from "./tabs/projects-tab";
 import { EcosystemTab } from "./tabs/EcosystemTab";
 import { EducationTab } from "./tabs/EducationTab";
 import { CertificationsTab } from "./tabs/CertificationsTab";
@@ -117,18 +117,18 @@ export function AdminShell({ initialData }: { initialData: SiteData }) {
               onChange={(v) => update("profile", v)}
             />
           )}
-          {active === "experience" && (
+          <div hidden={active !== "experience"}>
             <ExperienceTab
               value={data.experience}
               onChange={(v) => update("experience", v)}
             />
-          )}
-          {active === "projects" && (
+          </div>
+          <div hidden={active !== "projects"}>
             <ProjectsTab
               value={data.projects}
               onChange={(v) => update("projects", v)}
             />
-          )}
+          </div>
           {active === "ecosystem" && (
             <EcosystemTab
               value={data.ecosystem}

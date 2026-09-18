@@ -1,121 +1,68 @@
 # Ahmed ElSamman — Portfolio
 
-Cinematic, immersive portfolio for a Mid Frontend Developer.
-Built as a futuristic engineering control center, not a marketing page.
-All public content is editable through a private admin panel — no code changes needed.
+A responsive frontend engineering portfolio built with Next.js 15, React 18, TypeScript, and Tailwind CSS. The public site includes selected projects, individual project pages, experience, education, contact links, a downloadable CV, and light/dark themes.
 
-## Tech
+## Run locally
 
-- **Next.js 14** App Router · **React 18** · **TypeScript**
-- **TailwindCSS** for the design system
-- **React Three Fiber + drei + postprocessing** for the 3D hero
-- **Framer Motion** for motion
-- **Zustand** for global experience state
-- **Lenis** for smooth scroll
-- **Zod** for runtime data validation
-
-## Run
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
 ```
 
-Then open <http://localhost:3000>.
+Open http://localhost:3000. Copy `.env.local.example` to `.env.local` if needed, then set `ADMIN_PASSWORD` and a long random `ADMIN_SECRET`. Keep that file private.
 
-> **First-time setup:** Edit `.env.local` and set a strong `ADMIN_PASSWORD`. The file already has a random `ADMIN_SECRET`; replace it with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` if you want.
+## Edit jobs and projects
 
-## Editing your content
+Open http://localhost:3000/admin/27348 and sign in with your configured password.
 
-There are two ways to update the public site:
+- **Experience:** add a role, fill the company/title/dates, add responsibilities and technologies, then save.
+- **Projects:** add a project, fill its summary and story, upload a screenshot, add HTTPS links and technologies, then save.
+- Use the arrow controls to reorder entries. The first project is featured on the homepage.
+- Project and experience drafts survive switching between editor tabs. Leaving the page with unsaved changes prompts a browser warning.
 
-### Option 1 — Admin editor (recommended)
+Saves update `data/*.json`, create backups in `data/.backup/`, and refresh public page caches. Screenshots are converted to WebP and saved in `public/images/projects/`. New projects receive their own page automatically.
 
-1. Open <http://localhost:3000/admin/27348>
-2. Enter the password from `.env.local`
-3. Use the tabs to edit Profile, Experience, Projects, Skills, Education, Certifications, Architecture, Terminal, Navigation
-4. Click **Save changes** in each tab; the public site updates immediately
-
-The admin editor writes JSON files in `/data/`. Each save makes a timestamped backup in `data/.backup/` so nothing is ever lost.
-
-### Option 2 — Edit JSON directly
-
-Open any file in `/data/` and edit it. The schema is enforced by Zod on every read/write (see [src/lib/data-schemas.ts](src/lib/data-schemas.ts)).
-
-## Routing
-
-This is a single-page experience plus a hidden admin area.
-
-| Route | What it does |
-| --- | --- |
-| `/` | Public portfolio. All sections (Hero, Identity, Experience, Projects, Architecture, Ecosystem, Education, Terminal, Contact) on one page. Nav scrolls to in-page anchors (`#hero`, `#identity`, …) with IntersectionObserver tracking the active one. |
-| `/admin/27348` | Admin editor. Protected by middleware ([src/middleware.ts](src/middleware.ts)); redirects to login if no valid session cookie. |
-| `/admin/27348/login` | Password form. POSTs to `/api/admin/login`. |
-| `/api/admin/login` | Validates the password and sets an HttpOnly HMAC-signed cookie (12h). |
-| `/api/admin/logout` | Clears the session cookie. |
-| `/api/admin/[resource]` | `GET` reads, `PUT` writes the JSON file. Resources: `profile`, `experience`, `projects`, `ecosystem`, `education`, `certifications`, `architecture`, `terminal`, `nav`. Gated by middleware. |
-
-Anything not under `/admin/*` or `/api/admin/*` is public.
+See [the editing guide](docs/editing-content.md) for details.
 
 ## Project structure
 
-```
-data/                     # ← all editable content (JSON)
-  profile.json
-  experience.json
-  projects.json
-  ecosystem.json
-  education.json
-  certifications.json
-  architecture.json
-  terminal.json
-  nav.json
-
-src/
-  app/
-    page.tsx              # server component, reads /data and passes to sections
-    layout.tsx
-    globals.css
-    admin/27348/          # admin shell + login + tabs
-    api/admin/             # login, logout, [resource] CRUD
-  components/
-    system/               # Lenis, pointer, reduced-motion providers
-    ui/                   # Nav, SectionShell
-  features/loader/        # Cinematic intro loader
-  scenes/hero/            # The deep 3D hero (Canvas, particles, panels, grid)
-  sections/               # Hero, Identity, Experience, Projects, Architecture,
-                          # Ecosystem, Education, Terminal, Contact
-  lib/
-    data.ts               # server-only JSON loader (Zod-validated)
-    data-schemas.ts       # Zod schemas + types for every resource
-    admin-auth.ts         # password check + HMAC session helpers
-  middleware.ts           # gates /admin/* and /api/admin/*
-  stores/                 # Zustand stores
-  hooks/                  # useLenis, usePointer, useReducedMotion
+```text
+data/                         Editable content
+public/                       CV, icons, portrait, project captures
+src/features/portfolio/       Public sections, typed models, controls, CSS
+src/app/projects/[slug]/       Project pages
+src/app/admin/27348/           Private content editor
+src/app/api/admin/             Authentication, content saves, image uploads
+src/app/images/projects/      Serving newly uploaded images
+src/lib/                      Content schemas, loading, authentication, metadata
+tests/browser/                Production browser and accessibility checks
+scripts/lighthouse-audit.mjs   Mobile and desktop Lighthouse reports
+notes/                        CV and project source notes
 ```
 
-## Scripts
+## Verification
 
+```sh
+npm run lint
+npm run type-check
+npm run build
+npm run test:browser
+npm audit
 ```
-npm run dev          # dev server (http://localhost:3000)
-npm run build        # production build
-npm start            # serve production build
-npm run lint         # ESLint
-npm run type-check   # tsc --noEmit
+
+Run Lighthouse against a production server:
+
+```sh
+npm run start -- --hostname 127.0.0.1 --port 3100
+npm run audit:lighthouse
 ```
 
-## Performance
+Browser checks use installed Google Chrome. Reports and screenshots are saved under `artifacts/`. See [quality checks](docs/quality-checks.md) for configuration and measured results.
 
-- The 3D hero is lazy-loaded client-side only (`ssr: false`).
-- All public content is loaded server-side from JSON — no client fetch waterfalls.
-- Reduced-motion preference is respected: the loader shortens, particle motion calms.
-- Fonts (Inter + JetBrains Mono) are loaded with `display: swap`.
+## Hosting
 
-## Deployment notes
+A purchased domain is optional. On Vercel, metadata uses the hosting address automatically. For other hosts, set `NEXT_PUBLIC_SITE_URL` to the final HTTPS address.
 
-- **Local / VPS / self-hosted Node** — admin edits persist in `/data/*.json` on disk. Works out of the box.
-- **Vercel / Netlify (serverless)** — the file-system is read-only at runtime, so admin saves will fail. The public site still renders fine because content is bundled at build time. To enable runtime edits on those hosts, swap the file writer in [src/lib/data.ts](src/lib/data.ts) for a DB (Vercel KV, Supabase, Postgres, etc.).
+The file-backed editor requires a persistent, writable Node.js host. On Vercel or other read-only/serverless hosts, use the editor locally and redeploy the updated `data/` and `public/` folders. Online editing on those platforms requires persistent storage such as a database and image storage.
 
-## Customizing the admin URL
-
-The hidden route is `/admin/27348`. To change it, rename the directory at [src/app/admin/27348/](src/app/admin/27348) and update the matching `ADMIN_ROOT` constant in [src/middleware.ts](src/middleware.ts) plus the `matcher` config.
+Performance scores are measurements from a particular environment. Re-run Lighthouse on the deployed HTTPS address.

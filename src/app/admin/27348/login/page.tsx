@@ -3,12 +3,19 @@ import { LoginForm } from "./LoginForm";
 export const metadata = { title: "Admin · Sign in" };
 export const dynamic = "force-dynamic";
 
-export default function AdminLoginPage({
+interface AdminLoginSearchParameters {
+  next?: string;
+}
+
+interface AdminLoginPageProps {
+  searchParams: Promise<AdminLoginSearchParameters>;
+}
+
+export default async function AdminLoginPage({
   searchParams,
-}: {
-  searchParams: { next?: string };
-}) {
-  const nextPath = searchParams.next || "/admin/27348";
+}: AdminLoginPageProps) {
+  const parameters = await searchParams;
+  const nextPath = parameters.next || "/admin/27348";
   return (
     <main className="min-h-screen flex items-center justify-center px-6 bg-bg">
       <div className="w-full max-w-sm glass-panel hairline rounded-sm p-8">

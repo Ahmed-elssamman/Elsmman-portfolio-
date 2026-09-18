@@ -1,11 +1,6 @@
 [
-  { "id": "hero", "label": "Intro" },
-  { "id": "identity", "label": "Identity" },
+  { "id": "work", "label": "Work" },
+  { "id": "about", "label": "About" },
   { "id": "experience", "label": "Experience" },
-  { "id": "projects", "label": "Projects" },
-  { "id": "architecture", "label": "Architecture" },
-  { "id": "ecosystem", "label": "Ecosystem" },
-  { "id": "education", "label": "Education" },
-  { "id": "terminal", "label": "Terminal" },
   { "id": "contact", "label": "Contact" }
 ]

@@ -42,22 +42,28 @@ export const ExperienceItemSchema = z.object({
 export const ExperienceSchema = z.array(ExperienceItemSchema);
 
 export const ProjectSchema = z.object({
-  id: z.string().min(1),
+  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use a lowercase project identifier with hyphens."),
   index: z.string().min(1),
   name: z.string().min(1),
   category: z.string().default(""),
   summary: z.string().default(""),
   description: z.string().default(""),
+  image: z.string().regex(/^\/images\/[a-zA-Z0-9/_-]+\.(?:webp|png|jpg|jpeg)$/).or(z.literal("")).default(""),
+  imageAlt: z.string().default(""),
+  previewNote: z.string().default(""),
   metrics: z.array(Metric).default([]),
   stack: z.array(z.string()).default([]),
   architecture: z.array(z.string()).default([]),
   capsuleHue: z.number().min(0).max(360).default(210),
   highlights: z.array(z.string()).default([]),
   links: z
-    .array(z.object({ label: z.string(), href: z.string() }))
+    .array(z.object({ label: z.string().trim().min(1, "Add a link label."), href: z.string().url().startsWith("https://", "Use a complete HTTPS address.") }))
     .default([]),
 });
-export const ProjectsSchema = z.array(ProjectSchema);
+export const ProjectsSchema = z.array(ProjectSchema).refine(
+  (projects) => new Set(projects.map((project) => project.id)).size === projects.length,
+  "Every project needs a unique identifier."
+);
 
 export const EcosystemNodeSchema = z.object({
   id: z.string(),

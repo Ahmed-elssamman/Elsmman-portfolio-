@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f7f0"/>
+  <path d="M65 111H1135M65 550H1135" stroke="#d7dacf"/>
+  <rect x="65" y="40" width="45" height="45" rx="3" fill="none" stroke="#242b23"/>
+  <text x="71" y="73" fill="#242b23" font-family="Arial,sans-serif" font-size="31" font-weight="bold" letter-spacing="-3">ae.</text>
+  <text x="129" y="59" fill="#242b23" font-family="Arial,sans-serif" font-size="15" font-weight="bold">Ahmed ElSamman</text>
+  <text x="129" y="81" fill="#60675b" font-family="Arial,sans-serif" font-size="12">Frontend Engineer</text>
+  <text x="1135" y="68" text-anchor="end" fill="#60675b" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">CAIRO, EGYPT</text>
+  <text x="65" y="190" fill="#50633c" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">ANGULAR · REACT · TYPESCRIPT</text>
+  <text x="58" y="310" fill="#242b23" font-family="Arial,sans-serif" font-size="102" letter-spacing="-6">Good interfaces.</text>
+  <text x="62" y="421" fill="#50633c" font-family="Georgia,serif" font-size="112" font-style="italic" letter-spacing="-6">Great care.</text>
+  <text x="65" y="491" fill="#60675b" font-family="Arial,sans-serif" font-size="19">Thoughtful web experiences, built around real people.</text>
+  <text x="950" y="396" fill="#50633c" font-family="Georgia,serif" font-size="180">✳</text>
+  <text x="65" y="589" fill="#60675b" font-family="Arial,sans-serif" font-size="12">SELECTED WORK · EXPERIENCE · A LITTLE ABOUT ME</text>
+</svg>

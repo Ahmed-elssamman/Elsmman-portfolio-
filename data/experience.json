@@ -2,73 +2,108 @@
   {
     "id": "medica-scope",
     "company": "Medica Scope",
-    "role": "Mid Frontend Engineer",
-    "location": "Hybrid",
-    "type": "Full-time",
+    "role": "Frontend Engineer",
+    "location": "Cairo · Hybrid",
+    "type": "",
     "start": "Feb 2026",
     "end": "Present",
-    "summary": "Enterprise-grade LMS applications on Angular 21 in an Nx monorepo with SSR, SignalR realtime, RBAC, and bilingual RTL support for multi-tenant systems.",
+    "summary": "Learning platforms for multiple organizations, with shared Angular applications and real-time workflows.",
     "bullets": [
-      "Engineered enterprise-grade LMS applications using Angular 21 within Nx monorepo architecture with SSR capabilities, supporting multiple applications and scalable modular development.",
-      "Developed reusable configuration-driven modules and dynamic CRUD systems to accelerate delivery across scalable enterprise workflows.",
-      "Implemented real-time features using SignalR, RxJS, and Angular Signals for multi-tenant systems.",
-      "Built RBAC systems, authentication/authorization layers, multilingual RTL (Arabic/English) support, reusable data tables, and dynamic forms.",
-      "Applied Clean Architecture, SOLID principles, and modern Angular patterns (Standalone Components, Signals, Functional Guards) for maintainability and high code quality.",
-      "Optimized frontend performance through lazy loading, caching strategies, HTTP interceptors, and scalable rendering techniques.",
-      "Integrated REST APIs, file uploads, data visualization (Chart.js, FullCalendar), and export utilities (Excel, PDF, CSV).",
-      "Delivered responsive, accessible UIs using PrimeNG, TailwindCSS, and a custom design system aligned with product requirements."
+      "Build Angular applications in an Nx monorepo with server rendering and shared feature libraries.",
+      "Develop configuration-driven CRUD modules, dynamic forms, and reusable data tables.",
+      "Connect real-time workflows with SignalR, RxJS, and Angular Signals, with JWT authentication and role-based access.",
+      "Deliver responsive Arabic and English interfaces with RTL support, lazy loading, caching, and REST API integration."
     ],
-    "stack": ["Angular 21", "Nx", "SSR", "SignalR", "RxJS", "Signals", "PrimeNG", "Tailwind CSS", "Chart.js", "FullCalendar"]
+    "stack": [
+      "Angular",
+      "TypeScript",
+      "Nx",
+      "SignalR",
+      "RxJS",
+      "SSR"
+    ]
+  },
+  {
+    "id": "esquare",
+    "company": "ESquare",
+    "role": "Frontend Developer",
+    "location": "Remote",
+    "type": "Part-time",
+    "start": "Jul 2026",
+    "end": "Present",
+    "summary": "Factory interfaces that help operators monitor machines, sensor data, and production lines.",
+    "bullets": [
+      "Develop Angular applications for industrial monitoring and machine-control workflows.",
+      "Turn sensor data into dashboards, status views, and alerts for factory operators.",
+      "Build reusable, responsive components and connect them to industrial data services."
+    ],
+    "stack": [
+      "Angular",
+      "TypeScript",
+      "IoT",
+      "Data visualization"
+    ]
   },
   {
     "id": "ayen",
     "company": "Ayen",
     "role": "Frontend Developer",
-    "location": "Remote · Riyadh",
-    "type": "Contract",
+    "location": "Riyadh · Remote",
+    "type": "",
     "start": "Nov 2024",
-    "end": "Present",
-    "summary": "Modular Angular applications using scalable frontend architecture and reusable UI engineering practices.",
+    "end": "Feb 2026",
+    "summary": "Modular Angular applications built in collaboration with backend and UX teams.",
     "bullets": [
-      "Built modular Angular applications using scalable frontend architecture and reusable UI engineering practices.",
-      "Improved page-load speed by 40% using lazy loading, code splitting, and image optimization.",
-      "Implemented RESTful API integrations that reduced response latency by 30%.",
-      "Collaborated in Agile sprints with backend and UX teams through Jira and Slack.",
-      "Conducted code reviews and enforced ESLint / Prettier standards, decreasing bugs by 20%."
+      "Built reusable Angular components and responsive layouts across product features.",
+      "Integrated REST APIs and improved loading through lazy loading, code splitting, and image optimization.",
+      "Contributed to Agile delivery and code reviews, aligning implementation with UI/UX requirements and code standards."
     ],
-    "stack": ["Angular 15+", "TypeScript", "RxJS", "REST", "ESLint", "Prettier"]
+    "stack": [
+      "Angular",
+      "TypeScript",
+      "REST APIs",
+      "ESLint",
+      "Prettier"
+    ]
   },
   {
     "id": "iti",
-    "company": "Information Technology Institute (ITI)",
+    "company": "Information Technology Institute",
     "role": "Teaching Assistant",
-    "location": "Qena",
-    "type": "Part-time",
+    "location": "Qena, Egypt",
+    "type": "",
     "start": "Nov 2024",
-    "end": "Present",
-    "summary": "Mentored MEARN Stack trainees on Angular, React, TypeScript, and modern frontend engineering.",
+    "end": "Feb 2026",
+    "summary": "Hands-on frontend teaching and project mentorship for MEARN Stack trainees at ITI.",
     "bullets": [
-      "Delivered technical sessions covering Angular, React, TypeScript, and modern frontend engineering concepts.",
-      "Mentored trainees through scalable frontend architecture and API integration practices.",
-      "Evaluated and refactored student code for scalability and performance, improving project success rate by 35%.",
-      "Introduced Agile Scrum practices and Git workflows, enhancing team collaboration and delivery efficiency."
+      "Delivered sessions on Angular, React, TypeScript, JavaScript, component architecture, and API integration.",
+      "Helped trainees through project work, code reviews, debugging, and collaborative Git workflows."
     ],
-    "stack": ["Angular", "React", "TypeScript", "JavaScript", "Git", "Agile/Scrum"]
+    "stack": [
+      "Angular",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Git"
+    ]
   },
   {
     "id": "sys-gate",
     "company": "Sys Gate",
     "role": "Odoo Developer",
-    "location": "Cairo",
-    "type": "Full-time",
+    "location": "Cairo, Egypt",
+    "type": "",
     "start": "Sep 2023",
     "end": "May 2024",
-    "summary": "Extended and optimized ERP modules using Python on the Odoo Framework.",
+    "summary": "Custom ERP workflows and maintenance for business applications.",
     "bullets": [
-      "Extended and optimized ERP modules using Python (Odoo Framework), boosting efficiency by 25%.",
-      "Refactored legacy OOP modules to enhance maintainability and reduce errors by 15%.",
-      "Collaborated with cross-functional teams to deliver customized business solutions on time."
+      "Extended and maintained ERP modules with Python, Odoo, and PostgreSQL.",
+      "Refactored legacy object-oriented modules and worked with other teams to deliver business-specific workflows."
     ],
-    "stack": ["Python", "Odoo Framework", "PostgreSQL"]
+    "stack": [
+      "Python",
+      "Odoo",
+      "PostgreSQL"
+    ]
   }
 ]
