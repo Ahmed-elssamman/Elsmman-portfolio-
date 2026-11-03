@@ -1,104 +1,234 @@
 [
   {
-    "id": "ehsbha",
+    "id": "mirhal",
     "index": "01",
+    "name": "MIRHAL",
+    "category": "Personal growth platform · Angular / NestJS",
+    "summary": "A bilingual personal-growth platform that turns long-term goals into meaningful daily action.",
+    "description": "MIRHAL brings goals, milestones, projects, tasks, habits, reflection, and progress into one connected experience. The product includes a customer application, a separate administration experience, and a shared API. Arabic and English, RTL/LTR layouts, themes, responsive navigation, and installable PWA support are part of the product design.",
+    "image": "",
+    "imageAlt": "MIRHAL product identity and platform preview.",
+    "previewNote": "The existing live link is an earlier release; the current repository documents newer work that has not yet been deployed. The admin portal requires an authorized staff account.",
+    "metrics": [],
+    "stack": [
+      "Angular 21",
+      "Nx 22",
+      "NestJS 11",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS 4"
+    ],
+    "architecture": [
+      "Nx monorepo",
+      "Web + Admin + API",
+      "Shared domain/contracts/UI",
+      "PostgreSQL + Prisma",
+      "SSR / prerendering"
+    ],
+    "capsuleHue": 275,
+    "highlights": [
+      "Goals, milestones, projects, tasks, and subtasks",
+      "Habit schedules, streaks, and habit experiments",
+      "Quests, XP, achievements, and personal rewards",
+      "Arabic/English localization with full RTL/LTR support",
+      "Separate customer and staff administration applications",
+      "Session-based authentication and privacy-conscious offline caching"
+    ],
+    "links": [
+      {
+        "label": "Live demo (previous release)",
+        "href": "https://lifequest-web-cyan.vercel.app"
+      },
+      {
+        "label": "GitHub repository",
+        "href": "https://github.com/Ahmed-elssamman/MIRHAL"
+      },
+      {
+        "label": "Admin portal (staff access)",
+        "href": "https://lifequest-admin.vercel.app"
+      }
+    ]
+  },
+  {
+    "id": "ehsbha",
+    "index": "02",
     "name": "Ehsebha",
-    "category": "Driver analytics · React",
-    "summary": "A clearer picture of the working day. An Arabic-first dashboard that brings trips, expenses, and driver earnings together.",
-    "description": "Drivers work across several apps, but their real earnings depend on fuel, commission, and maintenance. Ehsebha brings those details into a bilingual web app, with a dashboard, trip management, vehicle costs, and a profit simulator. The frontend pairs React with TanStack Query and an installable PWA shell.",
+    "category": "Driver profitability platform · React / NestJS",
+    "summary": "An Arabic-first operating system that helps ride-share and delivery drivers understand their real profit.",
+    "description": "Ehsebha is designed for drivers whose earnings are spread across trips, fuel, commissions, expenses, and vehicle maintenance. The product combines trip and expense management, profitability analytics, OCR-assisted receipt extraction, and planning tools in a bilingual PWA. Its repository separates the React web experience from the NestJS API and PostgreSQL data layer.",
     "image": "/images/projects/ehsbha.webp",
-    "imageAlt": "Ehsebha welcome page with driver earnings features and sign-in form.",
-    "previewNote": "Captured from the public demo. Sign-in was unavailable during the September 2026 review; the linked source code shows the application features.",
+    "imageAlt": "Ehsebha driver profitability platform preview.",
+    "previewNote": "The GitHub README documents the current React PWA and NestJS architecture. Verify the deployed demo and authentication availability before presenting it as a fully working production demo.",
     "metrics": [],
     "stack": [
       "React 19",
       "TypeScript",
-      "Tailwind CSS",
+      "Vite",
       "TanStack Query",
-      "NestJS",
-      "PostgreSQL"
+      "Tailwind CSS",
+      "NestJS 11",
+      "Prisma",
+      "PostgreSQL",
+      "Workbox PWA"
     ],
     "architecture": [
       "React PWA",
       "TanStack Query",
       "NestJS API",
-      "Prisma",
+      "Prisma ORM",
       "PostgreSQL"
     ],
     "capsuleHue": 145,
     "highlights": [
-      "Arabic-first interface with English and RTL/LTR support",
-      "Trips, expenses, vehicle costs, and analytics in one workspace",
-      "Client-side profit simulator for exploring different working scenarios",
-      "Installable PWA with a separate administration app"
+      "Driver earnings, trip, expense, and vehicle-cost tracking",
+      "Profitability analytics and what-if planning",
+      "Arabic-first RTL interface with English support",
+      "OCR-assisted Arabic/English receipt and trip extraction",
+      "Installable PWA with offline-tolerant app shell"
     ],
     "links": [
       {
         "label": "Live demo",
-        "href": "https://erd-ehsbha-web.vercel.app"
+        "href": "https://ehsebha.vercel.app"
       },
       {
-        "label": "Source code",
+        "label": "GitHub repository",
         "href": "https://github.com/Ahmed-elssamman/ERD-Ehsbha"
       }
     ]
   },
   {
-    "id": "online-exam",
-    "index": "02",
-    "name": "Online Exam",
-    "category": "Learning platform · Angular",
-    "summary": "From choosing a subject to reviewing an answer. A focused exam experience built around progress, timing, and feedback.",
-    "description": "An exam flow needs to keep students oriented while time is running. This Angular application connects diploma browsing, timed questions, saved answer progress, and a review screen. Authentication is separated into a reusable library, while lazy-loaded routes keep the feature structure clear.",
-    "image": "/images/projects/online-exam.webp",
-    "imageAlt": "Online Exam sign-in page captured from the Angular application running locally.",
-    "previewNote": "Local capture of the public repository. The previously listed hosted demo was unavailable during review.",
+    "id": "3d-otaku",
+    "index": "03",
+    "name": "3D Otaku",
+    "category": "3D commerce storefront · Angular / Three.js",
+    "summary": "An Egypt-focused storefront for 3D-printed products, combining commerce workflows with interactive 3D previews.",
+    "description": "3D Otaku explores the engineering behind a specialized product storefront: catalog discovery, product details, 3D visualization, cart and checkout flows, customer accounts, and operational administration. The frontend uses Angular 21, SSR, Three.js, Tailwind CSS 4, and PrimeNG. The repository also documents a separate Express/MongoDB backend and detailed deployment, asset-integrity, and operational verification work.",
+    "image": "",
+    "imageAlt": "3D Otaku product storefront and interactive 3D product preview.",
+    "previewNote": "The source repository is private. The public demo is available at the link below; source-code access is not publicly available.",
     "metrics": [],
     "stack": [
       "Angular 21",
       "TypeScript",
-      "Signals",
-      "RxJS",
-      "PrimeNG",
-      "Tailwind CSS"
+      "Three.js",
+      "Tailwind CSS 4",
+      "PrimeNG 21",
+      "Express",
+      "MongoDB",
+      "SSR"
     ],
     "architecture": [
-      "Lazy-loaded features",
-      "Auth library",
-      "Angular Signals",
-      "REST API"
+      "Angular SSR storefront",
+      "Three.js product viewer",
+      "Express API",
+      "MongoDB",
+      "Admin workflows"
     ],
-    "capsuleHue": 225,
+    "capsuleHue": 32,
     "highlights": [
-      "Timed questions with progress indicators and saved answers",
-      "Diploma browsing, exam navigation, and answer review",
-      "Reusable authentication library with typed request contracts",
-      "Standalone components, Signals, and lazy-loaded feature routes"
+      "3D product viewer with WebGL context-loss and recovery handling",
+      "Product catalog and responsive storefront experiences",
+      "Cart, checkout, customer account, and admin workflows",
+      "SSR and server-side API integration",
+      "Asset integrity, performance, and browser QA tooling"
     ],
     "links": [
       {
-        "label": "Source code",
+        "label": "Live storefront",
+        "href": "https://3d-otaku-lemon.vercel.app"
+      }
+    ]
+  },
+  {
+    "id": "online-exam",
+    "index": "04",
+    "name": "Online Exam",
+    "category": "Online examination platform · Angular",
+    "summary": "A structured online examination experience built with Angular 21 and reusable authentication integration.",
+    "description": "Online Exam is an Angular application organized around a clear examination workflow. The repository uses Angular 21, TypeScript, PrimeNG, Tailwind CSS 4, RxJS, and a reusable authentication library. Its current README is framework-generated, so detailed claims about exam lifecycle, timer behavior, grading, and backend integration should be confirmed against the application screens and source before publication.",
+    "image": "/images/projects/online-exam.webp",
+    "imageAlt": "Online Exam Angular application sign-in screen.",
+    "previewNote": "The repository is public. The README contains Angular CLI setup information rather than a complete product specification; this case study intentionally limits claims to verified stack and project identity.",
+    "metrics": [],
+    "stack": [
+      "Angular 21",
+      "TypeScript",
+      "PrimeNG 21",
+      "Tailwind CSS 4",
+      "RxJS",
+      "Vitest"
+    ],
+    "architecture": [
+      "Angular standalone application",
+      "Reusable authentication library",
+      "Angular Router",
+      "Reactive programming"
+    ],
+    "capsuleHue": 215,
+    "highlights": [
+      "Angular 21 application structure",
+      "Reusable authentication package integration",
+      "PrimeNG and Tailwind-based UI stack",
+      "Vitest-based testing setup"
+    ],
+    "links": [
+      {
+        "label": "GitHub repository",
         "href": "https://github.com/Ahmed-elssamman/online-exam"
       }
     ]
   },
   {
-    "id": "postify",
-    "index": "03",
+    "id": "online-exam-workspace",
+    "index": "05",
+    "name": "Exam Workspace",
+    "category": "Nx workspace · Angular",
+    "summary": "An Angular examination workspace organized with Nx tooling.",
+    "description": "A separate public repository named online-exam-website contains an Nx workspace scaffold for an Angular examination application. It is listed separately from Online Exam only when the distinct repository itself is relevant; it should not be presented as a second finished product without reviewing its implementation.",
+    "image": "",
+    "imageAlt": "Exam Workspace project.",
+    "previewNote": "The repository README still contains the default Nx workspace onboarding content; implementation and readiness need further review.",
+    "metrics": [],
+    "stack": [
+      "Angular",
+      "Nx",
+      "TypeScript"
+    ],
+    "architecture": [
+      "Nx workspace",
+      "Angular application"
+    ],
+    "capsuleHue": 218,
+    "highlights": [
+      "Nx workspace structure",
+      "Angular application target"
+    ],
+    "links": [
+      {
+        "label": "GitHub repository",
+        "href": "https://github.com/Ahmed-elssamman/online-exam-website"
+      }
+    ]
+  },
+  {
+    "id": "3d-otaku-private-note",
+    "index": "06",
     "name": "Postify",
-    "category": "Editorial interface · Angular",
-    "summary": "A small application with attention to the everyday details: finding a post, reading a discussion, and getting useful feedback.",
-    "description": "Postify explores the full reading and writing flow around a posts API. Readers can search a responsive card grid, open a post, and browse comments. Angular Signal Forms handle validation, with loading skeletons, empty states, and toast feedback throughout. JSONPlaceholder simulates submissions, so new posts and comments are not persisted.",
+    "category": "Content application · Angular",
+    "summary": "A focused content experience exploring searchable posts, discussions, and form feedback.",
+    "description": "Postify is a small Angular application built around a posts API. It demonstrates signal-based filtering, post details, comments, validated forms, loading states, and user feedback. The project uses JSONPlaceholder for demonstration, so created posts and comments are simulated rather than persistently stored.",
     "image": "/images/projects/postify.webp",
-    "imageAlt": "Postify interface captured from the Angular application running locally.",
-    "previewNote": "Local capture of the public repository. JSONPlaceholder simulates submissions; new posts and comments are not persisted.",
+    "imageAlt": "Postify content application preview.",
+    "previewNote": "Demo uses JSONPlaceholder; write operations are simulated and are not persisted.",
     "metrics": [],
     "stack": [
       "Angular 21",
       "TypeScript",
       "Signals",
       "Signal Forms",
-      "Tailwind CSS",
+      "Tailwind CSS 4",
       "REST API"
     ],
     "architecture": [
@@ -107,16 +237,16 @@
       "HTTP interceptors",
       "JSONPlaceholder"
     ],
-    "capsuleHue": 30,
+    "capsuleHue": 31,
     "highlights": [
-      "Live title search with signal-based filtering",
-      "Post details, comments, and validated submission forms",
-      "Loading skeletons, empty states, and clear request feedback",
-      "JSONPlaceholder demo API; submissions are simulated"
+      "Signal-based search and filtering",
+      "Post details and comments",
+      "Validated post/comment form UI",
+      "Loading, empty, and error feedback states"
     ],
     "links": [
       {
-        "label": "Source code",
+        "label": "GitHub repository",
         "href": "https://github.com/Ahmed-elssamman/Postify-app"
       }
     ]
