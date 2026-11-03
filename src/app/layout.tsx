@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const profile = await readResource("profile");
   const siteUrl = getSiteUrl();
   const title = `${profile.name} | Frontend Engineer — Angular, React & TypeScript`;
-  const description = "Ahmed ElSamman is a Cairo-based Frontend Engineer building Angular and React applications with TypeScript, Nx, SSR, real-time workflows, and Arabic/English RTL experiences.";
+  const description = "Ahmed ElSamman is a Cairo-based Frontend Engineer building Angular and React apps with TypeScript, Nx, SSR, real-time features, and Arabic RTL support.";
   const metadata: Metadata = {
     title: { default: title, template: `%s | ${profile.name}` },
     description,
