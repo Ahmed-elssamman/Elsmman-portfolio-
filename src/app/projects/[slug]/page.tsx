@@ -36,7 +36,13 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     },
     twitter: { card: "summary_large_image", title: project.name, description: project.summary, images: ["/images/og-portfolio.png"] },
   };
-  if (getSiteUrl()) metadata.alternates = { canonical: `/projects/${project.id}` };
+  if (getSiteUrl()) {
+    metadata.alternates = { canonical: `/projects/${project.id}` };
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      url: new URL(`/projects/${project.id}`, getSiteUrl()!).toString(),
+    };
+  }
   return metadata;
 }
 
@@ -47,12 +53,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const project = projects[projectIndex];
   if (!project) notFound();
   const nextProject = projects[(projectIndex + 1) % projects.length];
+  const projectStructuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.name,
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+    description: project.summary,
+    author: {
+      "@type": "Person",
+      name: profile.name,
+      url: getSiteUrl() ?? undefined,
+    },
+    keywords: project.stack.join(", "),
+  }).replace(/</g, "\\u003c");
 
   return (
     <div className="portfolio" id="top">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader home={false} />
       <main id="main-content">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: projectStructuredData }} />
         <article className="case-study page-width">
           <Link className="text-link case-back" href="/#work"><PortfolioIcon name={IconName.ArrowLeft} />All selected work</Link>
           <div className="case-heading"><p className="eyebrow">Selected work / {project.index} / {project.category}</p><h1>{project.name}</h1><p>{project.summary}</p></div>
