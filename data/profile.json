@@ -1,28 +1,28 @@
 {
   "name": "Ahmed ElSamman",
   "role": "Frontend Engineer",
-  "tagline": "I turn complex products into clear, thoughtful interfaces.",
+  "tagline": "I build frontend experiences that make complex products easier to use.",
   "location": "Cairo, Egypt",
-  "status": "Open to frontend opportunities",
-  "shortBio": "I'm Ahmed, a frontend engineer in Cairo. I build Angular and React applications for learning platforms, industrial dashboards, and everyday tools, with a focus on clear interactions, reusable components, and Arabic / English experiences.",
+  "status": "Open to frontend opportunities · Full-time / Remote / Relocation",
+  "shortBio": "I'm Ahmed ElSamman, a frontend engineer focused on Angular, React, and TypeScript. I build production-oriented web experiences for enterprise learning platforms, industrial operations, and customer-facing products — with an emphasis on maintainable architecture, responsive interfaces, and Arabic/English RTL support.",
   "identityNarrative": [
     {
-      "heading": "Real products, real workflows",
-      "body": "My work started with business systems in Odoo. Today I build frontend applications for learning platforms and factories, turning detailed requirements into interfaces people can work with every day."
+      "heading": "Engineering beyond the screen",
+      "body": "I enjoy turning complex product requirements into interfaces teams can evolve confidently. My work spans feature architecture, reusable components, API integration, real-time workflows, SSR, performance, and accessible user experiences."
     },
     {
-      "heading": "Built for both directions",
-      "body": "Arabic and English interfaces are part of my day-to-day work. I pay attention to layout direction, responsive behavior, and reusable components so the experience stays consistent across screens."
+      "heading": "Enterprise thinking, product detail",
+      "body": "At Medica Scope, I work on multi-tenant learning experiences within an Angular and Nx environment. Alongside that, I build industrial monitoring interfaces and independent products that solve practical problems, from driver profitability to personal productivity."
     },
     {
-      "heading": "Better work through collaboration",
-      "body": "I work closely with backend and UX teams, and I have taught Angular, React, and TypeScript at ITI. Reviewing code and helping trainees through their projects made explaining technical decisions a regular part of my work."
+      "heading": "A collaborative engineer",
+      "body": "I collaborate across frontend, backend, and product/UX work, and bring a teaching mindset from my ITI experience. I value clear communication, thoughtful code reviews, and technical decisions that make the next change easier."
     }
   ],
   "achievements": [
-    "Built multi-tenant learning interfaces with Angular and Nx.",
-    "Developed industrial dashboards for machines and production lines.",
-    "Taught frontend development and mentored MEARN Stack trainees at ITI."
+    "Building multi-tenant LMS experiences with Angular, Nx, SSR, and real-time workflows.",
+    "Developing industrial monitoring interfaces for machines, sensor data, and production operations.",
+    "Creating independent products including MIRHAL and Ehsebha, spanning frontend architecture and API integration."
   ],
   "links": {
     "github": "https://github.com/Ahmed-elssamman",
@@ -33,20 +33,20 @@
   },
   "telemetry": [
     {
-      "k": "Role",
-      "v": "Frontend Engineer"
+      "k": "Primary stack",
+      "v": "Angular · TypeScript · React"
     },
     {
-      "k": "Focus",
-      "v": "Angular · React · TypeScript"
+      "k": "Engineering",
+      "v": "Nx · SSR · Signals · RxJS"
     },
     {
       "k": "Based in",
       "v": "Cairo, Egypt"
     },
     {
-      "k": "Languages",
-      "v": "Arabic · English"
+      "k": "Open to",
+      "v": "Egypt · GCC · Remote"
     }
   ],
   "languages": [
