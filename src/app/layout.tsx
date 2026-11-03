@@ -15,20 +15,34 @@ const manrope = Manrope({
 export async function generateMetadata(): Promise<Metadata> {
   const profile = await readResource("profile");
   const siteUrl = getSiteUrl();
-  const title = `${profile.name} — Frontend Engineer`;
-  const description = "Frontend engineer in Cairo building thoughtful Angular and React applications. Explore Ahmed ElSamman's selected projects, experience, and approach to accessible web interfaces.";
+  const title = `${profile.name} | Frontend Engineer — Angular, React & TypeScript`;
+  const description = "Ahmed ElSamman is a Cairo-based Frontend Engineer building Angular and React applications with TypeScript, Nx, SSR, real-time workflows, and Arabic/English RTL experiences.";
   const metadata: Metadata = {
     title: { default: title, template: `%s | ${profile.name}` },
     description,
     applicationName: "Ahmed ElSamman Portfolio",
     authors: [{ name: profile.name }],
-    keywords: ["Ahmed ElSamman", "Frontend Engineer", "Angular Developer", "React", "TypeScript", "Cairo"],
+    keywords: [
+      "Ahmed ElSamman",
+      "Frontend Engineer Egypt",
+      "Angular Developer",
+      "React Developer",
+      "TypeScript",
+      "Next.js",
+      "Nx Monorepo",
+      "Enterprise Web Applications",
+      "Frontend Engineer Cairo",
+      "Arabic RTL Web Development",
+      "SSR",
+      "SignalR",
+    ],
     openGraph: {
       title,
       description,
       type: "website",
       locale: "en_US",
       siteName: profile.name,
+      ...(siteUrl ? { url: siteUrl } : {}),
       images: [{ url: "/images/og-portfolio.png", width: 1200, height: 630, alt: "Ahmed ElSamman — Frontend Engineer. Good interfaces. Great care." }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/images/og-portfolio.png"] },
