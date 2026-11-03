@@ -4,23 +4,25 @@
     "company": "Medica Scope",
     "role": "Frontend Engineer",
     "location": "Cairo · Hybrid",
-    "type": "",
+    "type": "Full-time",
     "start": "Feb 2026",
     "end": "Present",
-    "summary": "Learning platforms for multiple organizations, with shared Angular applications and real-time workflows.",
+    "summary": "Enterprise multi-tenant LMS interfaces built with Angular and Nx.",
     "bullets": [
-      "Build Angular applications in an Nx monorepo with server rendering and shared feature libraries.",
-      "Develop configuration-driven CRUD modules, dynamic forms, and reusable data tables.",
-      "Connect real-time workflows with SignalR, RxJS, and Angular Signals, with JWT authentication and role-based access.",
-      "Deliver responsive Arabic and English interfaces with RTL support, lazy loading, caching, and REST API integration."
+      "Build Angular applications in an Nx monorepo with SSR and shared feature libraries.",
+      "Develop configuration-driven CRUD modules, dynamic forms, reusable data tables, and multi-step workflows.",
+      "Integrate real-time workflows using SignalR, RxJS, and Angular Signals, with role-based access control.",
+      "Deliver responsive Arabic/English interfaces with RTL support, REST API integration, and performance-focused loading patterns."
     ],
     "stack": [
-      "Angular",
+      "Angular 21",
       "TypeScript",
       "Nx",
       "SignalR",
       "RxJS",
-      "SSR"
+      "SSR",
+      "PrimeNG",
+      "Tailwind CSS"
     ]
   },
   {
@@ -31,17 +33,17 @@
     "type": "Part-time",
     "start": "Jul 2026",
     "end": "Present",
-    "summary": "Factory interfaces that help operators monitor machines, sensor data, and production lines.",
+    "summary": "Industrial interfaces for machine monitoring and factory operations.",
     "bullets": [
-      "Develop Angular applications for industrial monitoring and machine-control workflows.",
-      "Turn sensor data into dashboards, status views, and alerts for factory operators.",
-      "Build reusable, responsive components and connect them to industrial data services."
+      "Develop Angular interfaces for industrial monitoring and machine-control workflows.",
+      "Translate sensor and production data into dashboards, status views, and operator-facing alerts.",
+      "Build reusable responsive components and integrate them with industrial data services."
     ],
     "stack": [
       "Angular",
       "TypeScript",
       "IoT",
-      "Data visualization"
+      "Data Visualization"
     ]
   },
   {
@@ -52,7 +54,7 @@
     "type": "",
     "start": "Nov 2024",
     "end": "Feb 2026",
-    "summary": "Modular Angular applications built in collaboration with backend and UX teams.",
+    "summary": "Modular Angular applications delivered with backend and UX collaboration.",
     "bullets": [
       "Built reusable Angular components and responsive layouts across product features.",
       "Integrated REST APIs and improved loading through lazy loading, code splitting, and image optimization.",
@@ -68,16 +70,16 @@
   },
   {
     "id": "iti",
-    "company": "Information Technology Institute",
+    "company": "Information Technology Institute (ITI)",
     "role": "Teaching Assistant",
     "location": "Qena, Egypt",
     "type": "",
     "start": "Nov 2024",
     "end": "Feb 2026",
-    "summary": "Hands-on frontend teaching and project mentorship for MEARN Stack trainees at ITI.",
+    "summary": "Frontend development teaching and project mentorship for MEARN Stack trainees.",
     "bullets": [
-      "Delivered sessions on Angular, React, TypeScript, JavaScript, component architecture, and API integration.",
-      "Helped trainees through project work, code reviews, debugging, and collaborative Git workflows."
+      "Delivered sessions covering Angular, React, TypeScript, JavaScript, component architecture, and API integration.",
+      "Supported trainees through project implementation, code reviews, debugging, and collaborative Git workflows."
     ],
     "stack": [
       "Angular",
@@ -95,10 +97,10 @@
     "type": "",
     "start": "Sep 2023",
     "end": "May 2024",
-    "summary": "Custom ERP workflows and maintenance for business applications.",
+    "summary": "ERP customization and maintenance for business workflows.",
     "bullets": [
       "Extended and maintained ERP modules with Python, Odoo, and PostgreSQL.",
-      "Refactored legacy object-oriented modules and worked with other teams to deliver business-specific workflows."
+      "Refactored object-oriented modules and collaborated with other teams to deliver business-specific workflows."
     ],
     "stack": [
       "Python",
