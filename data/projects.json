@@ -181,39 +181,55 @@
     ]
   },
   {
-    "id": "online-exam-workspace",
+    "id": "sakny",
     "index": "05",
-    "name": "Exam Workspace",
-    "category": "Nx workspace · Angular",
-    "summary": "An Angular examination workspace organized with Nx tooling.",
-    "description": "A separate public repository named online-exam-website contains an Nx workspace scaffold for an Angular examination application. It is listed separately from Online Exam only when the distinct repository itself is relevant; it should not be presented as a second finished product without reviewing its implementation.",
+    "name": "Sakny · سكني",
+    "category": "Shared living platform · Angular / Firebase",
+    "summary": "An Arabic-first shared-apartment app that brings rent, shared expenses, contributions, and household responsibilities into one transparent workspace.",
+    "description": "Sakny helps residents manage the practical and financial side of living together in Egypt. It distinguishes expenses paid from the apartment contribution pool from expenses split among members, keeps an auditable record, and rotates household responsibilities. The resident app and separate administrator experience use Angular 22, strict TypeScript, Firebase Authentication and Firestore, with an authenticated server API for sensitive operations.",
     "image": "",
-    "imageAlt": "Exam Workspace project.",
-    "previewNote": "The repository README still contains the default Nx workspace onboarding content; implementation and readiness need further review.",
+    "imageAlt": "Sakny shared apartment management platform preview.",
+    "previewNote": "The source repository is private. The live resident app is public; the administrator portal requires authorized access.",
     "metrics": [],
     "stack": [
-      "Angular",
-      "Nx",
-      "TypeScript"
+      "Angular 22",
+      "TypeScript",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Node.js",
+      "Vercel API",
+      "Vitest",
+      "Playwright"
     ],
     "architecture": [
-      "Nx workspace",
-      "Angular application"
+      "Resident app + Admin app",
+      "Firebase Authentication",
+      "Firestore",
+      "Authenticated server API",
+      "Server-side financial transactions"
     ],
-    "capsuleHue": 218,
+    "capsuleHue": 185,
     "highlights": [
-      "Nx workspace structure",
-      "Angular application target"
+      "Arabic-first bilingual shared-apartment management",
+      "Separate shared-pool contributions and member-split expenses",
+      "Server-side transactional financial writes and auditable history",
+      "Rotating household responsibilities and task notifications",
+      "Independent platform administration and support workflows",
+      "Browser QA covering responsive layouts and Arabic/English direction"
     ],
     "links": [
       {
-        "label": "GitHub repository",
-        "href": "https://github.com/Ahmed-elssamman/online-exam-website"
+        "label": "Live app",
+        "href": "https://sakny.elsamman.tech"
+      },
+      {
+        "label": "Administrator site",
+        "href": "https://sakny-admin.elsamman.tech"
       }
     ]
   },
   {
-    "id": "3d-otaku-private-note",
+    "id": "postify",
     "index": "06",
     "name": "Postify",
     "category": "Content application · Angular",
