@@ -9,6 +9,7 @@ interface PersonSchema {
   jobTitle: string;
   description: string;
   sameAs: string[];
+  knowsAbout: string[];
   url?: string;
 }
 
@@ -20,6 +21,24 @@ export function getPersonSchema(profile: Profile): string {
     jobTitle: profile.role,
     description: profile.shortBio,
     sameAs: [profile.links.github, profile.links.linkedin].filter(Boolean),
+    knowsAbout: [
+      "Frontend engineering",
+      "Angular",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Nx",
+      "Server-side rendering",
+      "Angular Signals",
+      "RxJS",
+      "REST API integration",
+      "Real-time web applications",
+      "Responsive web design",
+      "Web accessibility",
+      "Arabic and English localization",
+      "Right-to-left user interfaces",
+    ],
   };
   const siteUrl = getSiteUrl();
   if (siteUrl) schema.url = siteUrl;
