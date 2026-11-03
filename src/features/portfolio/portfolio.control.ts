@@ -9,32 +9,32 @@ export const NAVIGATION: NavigationItem[] = [
 ];
 
 export const HERO = {
-  introduction: "Hi, I’m Ahmed. A frontend engineer.",
-  headline: "Good interfaces.",
-  headlineAccent: "Great care.",
-  description: "I turn complex requirements into clear, responsive web experiences. Specializing in Angular, with a soft spot for the details that make a product feel right.",
-  note: "A little structure. A lot of attention to detail.",
-  specialties: ["Angular & TypeScript", "React & Next.js", "Accessible interfaces", "Arabic & English"],
+  introduction: "Hi, I’m Ahmed ElSamman — Frontend Engineer.",
+  headline: "Engineering products.",
+  headlineAccent: "Human experiences.",
+  description: "I build scalable Angular and React applications, from enterprise learning platforms to customer-facing products. I care about clear architecture, responsive UX, and the engineering details behind reliable interfaces.",
+  note: "Frontend engineering · Product thinking · Thoughtful execution",
+  specialties: ["Angular & TypeScript", "React & Next.js", "Nx & SSR", "Arabic / English RTL"],
 };
 
 export const EXPERTISE: Expertise[] = [
   {
     number: "01",
-    title: "Interfaces with intent",
-    description: "Responsive layouts, accessible interactions, and Arabic / English experiences that feel considered on every screen.",
-    tools: ["Angular", "React", "TypeScript", "Tailwind CSS"],
+    title: "Frontend architecture",
+    description: "Feature-driven applications, reusable components, clear boundaries, and maintainable TypeScript that supports teams as products grow.",
+    tools: ["Angular", "React", "TypeScript", "Nx"],
   },
   {
     number: "02",
-    title: "Room to grow",
-    description: "Reusable components and clear feature boundaries. A foundation that makes the next change easier for the whole team.",
-    tools: ["Nx", "Signals", "RxJS", "PrimeNG"],
+    title: "Real product workflows",
+    description: "Dynamic forms, data-heavy interfaces, authentication integration, API-driven states, and real-time experiences built around users’ actual work.",
+    tools: ["Signals", "RxJS", "REST APIs", "SignalR"],
   },
   {
     number: "03",
-    title: "The whole experience",
-    description: "API integration, real-time updates, and careful loading states. Because the work goes beyond the first screen.",
-    tools: ["REST APIs", "SignalR", "SSR", "Git"],
+    title: "Quality in the details",
+    description: "Responsive and accessible interfaces, SSR where it matters, RTL/LTR localization, performance, and practical automated verification.",
+    tools: ["SSR", "Tailwind CSS", "PrimeNG", "Playwright"],
   },
 ];
 
